@@ -1,0 +1,49 @@
+{% extends '../../layout/_layoutInner.twig' %} {% block title %} Login - Boxclip
+{% endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+
+<div class="loginPage">
+  <div class="loginCard">
+    <div class="topLogo">
+      <img src="../../img/common/logo.png" alt="boxClip" />
+    </div>
+    <div class="logForm">
+      <div class="label"><span>Sign In</span></div>
+
+      <form action="">
+        <div class="formItem mformItem">
+          <input
+            class="minput"
+            type="email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <label class="mlabel" for="email">Email Address</label>
+        </div>
+        <div class="formItem mformItem">
+          <input
+            class="minput"
+            type="password"
+            id="password"
+            placeholder="Passwod"
+          />
+          <label class="mlabel" for="password">Password</label>
+        </div>
+        <div class="bottomPrt">
+          <div class="texts">
+            <span class="signUp"
+              >Don’t have an account? <a href="./auth/signup">Sign Up</a></span
+            >
+            <span class="forgot"
+              ><a href="./auth/forgot">Forgot Password?</a></span
+            >
+          </div>
+          <div class="logUser">
+            <input type="submit" class="pBtn" value="Sign In" id="" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

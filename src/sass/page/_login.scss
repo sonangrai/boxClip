@@ -1,0 +1,47 @@
+.loginPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/login/logBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .loginCard {
+    background-color: #212121de;
+    border-radius: $radius;
+    border: 1px solid #8b8b8b;
+    padding: 2em;
+    min-width: 500px;
+  }
+  .topLogo {
+    text-align: center;
+    margin: 1em 0;
+  }
+  .logForm {
+    .label {
+      color: $color-white;
+      font-size: 1.2em;
+      font-weight: $font-bold;
+      margin-bottom: 2em;
+    }
+  }
+
+  .bottomPrt {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .texts {
+      .signUp,
+      .forgot {
+        display: block;
+        color: $color-white;
+        a {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

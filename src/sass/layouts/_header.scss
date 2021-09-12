@@ -1,0 +1,45 @@
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  .pace--header {
+    width: 100%;
+  }
+  .head--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pace--logo {
+    a {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+      figure {
+        margin: 0 0.2em 0 0;
+        width: 44px;
+        height: 33px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      span {
+        color: $color-black;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.pace--scheduler {
+  a.btn {
+    font-size: 0.8em;
+    background-color: $primary-color;
+    border-radius: 24px;
+    color: $color-white;
+    padding: 0.4em 0.8em;
+    text-decoration: none;
+  }
+}

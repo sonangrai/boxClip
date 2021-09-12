@@ -1,0 +1,57 @@
+//material Input
+.mformItem {
+  position: relative;
+}
+.minput {
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  color: $color-white;
+  border-bottom: 1px solid #585858;
+  padding: 0.5em 0;
+  transition: 0.3s;
+  &:focus {
+    outline: 0;
+    ~ .mlabel {
+      color: $color-white;
+      transform: scale(0.6);
+    }
+  }
+  &.mshow {
+    ~ .mlabel {
+      color: $color-white;
+      transform: scale(0.6);
+    }
+  }
+  &::-webkit-input-placeholder {
+    transition: color 300ms ease;
+  }
+  &:not(:focus)::-webkit-input-placeholder {
+    color: transparent;
+  }
+}
+.mlabel {
+  position: absolute;
+  color: #aeaeae;
+  left: 0;
+  top: 0;
+  transform-origin: 0 -150%;
+  transition: transform 300ms ease;
+}
+
+//Form
+.formItem {
+  margin-bottom: 2em;
+}
+
+//Buttons
+.pBtn {
+  background-color: $primary-color;
+  border: 0;
+  padding: 0.8em 1.2em;
+  color: $color-white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: $font-sbold;
+}

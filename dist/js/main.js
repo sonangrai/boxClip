@@ -1,0 +1,1 @@
+"use strict";!function(){console.log("Have a good day 🎈");let e=document.querySelectorAll(".minput");e.forEach(e=>{e.addEventListener("change",()=>{0!==e.value.length?e.classList.add("mshow"):e.classList.remove("mshow")})})}();
