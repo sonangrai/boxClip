@@ -37,14 +37,24 @@
   "use strict";
 
   (function () {
-    console.log("Have a good day 🎈");
-
     /**
      * For search anim
      */
     let searchBtn = document.querySelector(".searchOpen");
     searchBtn.addEventListener("click", () => {
       searchBtn.parentElement.classList.add("show");
+    });
+
+    document.addEventListener("click", function (event) {
+      var isClickInside = searchBtn.contains(event.target);
+      var isClickInside2 = document
+        .querySelector(".srchForm")
+        .contains(event.target);
+
+      if (!isClickInside && !isClickInside2) {
+        //the click was outside the specifiedElement, do something
+        searchBtn.parentElement.classList.remove("show");
+      }
     });
   })();
 </script>
