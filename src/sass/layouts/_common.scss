@@ -42,6 +42,20 @@
 //Form
 .formItem {
   margin-bottom: 2em;
+  label {
+    color: $color-white;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+.inline-form {
+  display: flex;
+  align-items: flex-start;
+  input {
+    margin-right: 1em;
+  }
 }
 
 //Buttons

@@ -83,4 +83,36 @@
       font-weight: $font-light;
     }
   }
+  .oauth {
+    display: flex;
+    margin: 1.5em 0;
+    .butcons {
+      margin-right: 1em;
+      border-radius: 5px;
+      a {
+        display: block;
+        padding: 0.8em;
+        text-decoration: none;
+        color: $color-white;
+        font-size: 0.8em;
+        img {
+          margin-right: 10px;
+        }
+      }
+      &:first-child {
+        border: 1px solid $primary-color;
+        background-color: #1877f238;
+      }
+      &:last-child {
+        border: 1px solid #ea4335;
+        background-color: #ea43352e;
+      }
+    }
+  }
+
+  .bottomPrt {
+    .signUser {
+      text-align: right;
+    }
+  }
 }
