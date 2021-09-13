@@ -81,14 +81,107 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
+
+    <div class="tab-content packs" id="myTabContent">
       <div
         class="tab-pane fade show active"
         id="monthly"
         role="tabpanel"
         aria-labelledby="home-tab"
       >
-        .m..
+        <div class="packRow">
+          <div class="packItem">
+            <div class="top">
+              <div class="label"><span>Basic</span></div>
+              <div class="culist">
+                <div class="lItem">
+                  <span
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.5 0C3.35253 0 0 3.35253 0 7.5C0 11.6475 3.35253 15 7.5 15C11.6475 15 15 11.6475 15 7.5C15 3.35253 11.6475 0 7.5 0ZM6.79148 10.8871C6.61866 11.0599 6.37673 11.1636 6.11751 11.1636C5.8583 11.1636 5.61636 11.0599 5.44355 10.8871L2.76498 8.20853L4.1129 6.8606L6.11751 8.86521L10.8871 4.09562L12.235 5.44355L6.79148 10.8871Z"
+                        fill="#6BF39A"
+                      />
+                    </svg>
+                  </span>
+                  <span>50 GB upload allowed</span>
+                </div>
+                <div class="lItem">
+                  <span
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.5 0C3.35253 0 0 3.35253 0 7.5C0 11.6475 3.35253 15 7.5 15C11.6475 15 15 11.6475 15 7.5C15 3.35253 11.6475 0 7.5 0ZM6.79148 10.8871C6.61866 11.0599 6.37673 11.1636 6.11751 11.1636C5.8583 11.1636 5.61636 11.0599 5.44355 10.8871L2.76498 8.20853L4.1129 6.8606L6.11751 8.86521L10.8871 4.09562L12.235 5.44355L6.79148 10.8871Z"
+                        fill="#6BF39A"
+                      />
+                    </svg>
+                  </span>
+                  <span>20MB/s upload bandwidth</span>
+                </div>
+                <div class="lItem">
+                  <span
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.5 0C3.35253 0 0 3.35253 0 7.5C0 11.6475 3.35253 15 7.5 15C11.6475 15 15 11.6475 15 7.5C15 3.35253 11.6475 0 7.5 0ZM6.79148 10.8871C6.61866 11.0599 6.37673 11.1636 6.11751 11.1636C5.8583 11.1636 5.61636 11.0599 5.44355 10.8871L2.76498 8.20853L4.1129 6.8606L6.11751 8.86521L10.8871 4.09562L12.235 5.44355L6.79148 10.8871Z"
+                        fill="#6BF39A"
+                      />
+                    </svg>
+                  </span>
+                  <span>Edit Options Available</span>
+                </div>
+                <div class="lItem">
+                  <span
+                    ><svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.5 0C3.35253 0 0 3.35253 0 7.5C0 11.6475 3.35253 15 7.5 15C11.6475 15 15 11.6475 15 7.5C15 3.35253 11.6475 0 7.5 0ZM6.79148 10.8871C6.61866 11.0599 6.37673 11.1636 6.11751 11.1636C5.8583 11.1636 5.61636 11.0599 5.44355 10.8871L2.76498 8.20853L4.1129 6.8606L6.11751 8.86521L10.8871 4.09562L12.235 5.44355L6.79148 10.8871Z"
+                        fill="#6BF39A"
+                      />
+                    </svg>
+                  </span>
+                  <span>Only one upload at a time</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <div class="price">
+                <span>$1.99</span>
+              </div>
+              <div class="button">
+                <button
+                  type="button"
+                  class="pBtn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Choose
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="tab-pane fade"
@@ -102,7 +195,36 @@
   </div>
 </div>
 
-
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
