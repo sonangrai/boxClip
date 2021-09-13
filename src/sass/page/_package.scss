@@ -16,6 +16,13 @@
         }
       }
     }
+    .searchPrt {
+      display: flex;
+      align-items: center;
+      .fav {
+        margin-left: 1em;
+      }
+    }
   }
 
   .tabBar {

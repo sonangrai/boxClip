@@ -1,0 +1,43 @@
+.searchBox {
+  text-align: right;
+  height: 30px;
+  overflow: hidden;
+  &.show {
+    .srchForm {
+      transform: translateY(-33px);
+    }
+  }
+  .searchOpen {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 1em;
+    transform: translateY(5px);
+    transition: 0.3s;
+  }
+  .srchForm {
+    display: block;
+    background-color: #616161;
+    padding: 0.2em 0.5em;
+    border-radius: 2px;
+    transition: 0.3s;
+    input {
+      background-color: transparent;
+      border: 0;
+      color: $color-white;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $color-white;
+        font-size: 0.8em;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
