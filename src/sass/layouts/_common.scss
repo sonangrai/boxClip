@@ -65,13 +65,16 @@
   justify-content: center;
   align-items: center;
   margin: 1em 0;
+  &.nav-tabs {
+    border-bottom: 0;
+  }
   .tabItem {
     cursor: pointer;
-    padding: 1em 1.5em;
     background-color: #333333;
     font-size: 1.1em;
     color: #8a8a8a;
     font-weight: $font-bold;
+    overflow: hidden;
     &:first-child {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
@@ -80,9 +83,23 @@
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
     }
-    &.active {
-      background-color: $primary-color;
+    .nav-link {
+      padding: 1em 1.5em;
       color: $color-white;
+    }
+    button {
+      border: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+
+      &:focus {
+        outline: none;
+        border: 0;
+      }
+      &.active {
+        background-color: $primary-color;
+        color: $color-white;
+      }
     }
   }
 }
