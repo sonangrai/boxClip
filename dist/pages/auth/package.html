@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -1158,23 +1158,62 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content signupModal">
+      <div class="modal-body">
+        <div class="signupForm">
+          <div class="topHead">
+            <strong>Create New Account</strong>
+            <span>Fill the details below to create a gold membership</span>
+          </div>
+          <div class="oauth">
+            <div class="butcons">
+              <a href="#!">
+                <img src="../../../img/login/fb.png" alt="" />
+                <span>Sign Up with Facebook</span>
+              </a>
+            </div>
+            <div class="butcons">
+              <a href="#!">
+                <img src="../../../img/login/ggl.png" alt="" />
+                <span>Sign Up with Google</span>
+              </a>
+            </div>
+          </div>
+          <form action="">
+            <div class="formItem mformItem">
+              <input
+                class="minput"
+                type="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <label class="mlabel" for="email">Email Address</label>
+            </div>
+            <div class="formItem mformItem">
+              <input
+                class="minput"
+                type="password"
+                id="password"
+                placeholder="Passwod"
+              />
+              <label class="mlabel" for="password">Password</label>
+            </div>
+            <div class="bottomPrt">
+              <div class="texts">
+                <span class="signUp"
+                  >Don’t have an account? <a href="./type">Sign Up</a></span
+                >
+                <span class="forgot"
+                  ><a href="./auth/forgot">Forgot Password?</a></span
+                >
+              </div>
+              <div class="logUser">
+                <input type="submit" class="pBtn" value="Sign In" id="" />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

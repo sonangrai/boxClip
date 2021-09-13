@@ -61,3 +61,26 @@
     }
   }
 }
+
+.signupModal {
+  background-color: #212121;
+  border-radius: 23px;
+  border: 1px solid $primary-color;
+  padding: 3em;
+  .modal-body {
+    padding: 0;
+  }
+  .topHead {
+    strong {
+      color: $color-white;
+      display: block;
+      font-weight: $font-bold;
+      font-size: 1.1em;
+    }
+    span {
+      color: $color-white;
+      display: block;
+      font-weight: $font-light;
+    }
+  }
+}
