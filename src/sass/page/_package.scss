@@ -1,0 +1,28 @@
+.packagePage {
+  background-color: #121212;
+
+  .head {
+    padding: 2em;
+    .headRow {
+      display: flex;
+      justify-content: space-between;
+      .icon {
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .tabBar {
+    text-align: center;
+    .label {
+      span {
+        color: #606060;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        font-size: 1.6em;
+      }
+    }
+  }
+}

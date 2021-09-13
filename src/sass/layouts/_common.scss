@@ -55,3 +55,34 @@
   border-radius: 5px;
   font-weight: $font-sbold;
 }
+
+//Tab
+.theTab {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  .tabItem {
+    cursor: pointer;
+    padding: 1em 1.5em;
+    background-color: #333333;
+    font-size: 1.1em;
+    color: #8a8a8a;
+    font-weight: $font-bold;
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &.active {
+      background-color: $primary-color;
+      color: $color-white;
+    }
+  }
+}
