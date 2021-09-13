@@ -16,12 +16,62 @@
 
   .tabBar {
     text-align: center;
+    padding: 3em 0;
     .label {
       span {
         color: #606060;
         font-weight: $font-bold;
         text-transform: uppercase;
         font-size: 1.6em;
+      }
+    }
+
+    .packRow {
+      display: flex;
+      padding: 0 3em;
+      .packItem {
+        width: calc(100% / 4 - 1em);
+        padding: 2em;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.3s;
+        &.hovered {
+          background-color: #333;
+        }
+        .top {
+          text-align: left;
+          .label {
+            span {
+              color: $color-white;
+              text-transform: capitalize;
+            }
+          }
+          .culist {
+            .lItem {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              margin-top: 1em;
+              span {
+                color: $color-white;
+                font-weight: $font-medium;
+                &:first-child {
+                  margin-right: 0.5em;
+                }
+              }
+            }
+          }
+        }
+        .bottom {
+          .price {
+            color: $color-white;
+            font-size: 2.5em;
+            font-weight: $font-bold;
+            margin: 1em 0;
+          }
+        }
       }
     }
   }
