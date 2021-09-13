@@ -1,5 +1,9 @@
 .packagePage {
   background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 
   .head {
     padding: 2em;
@@ -16,7 +20,6 @@
 
   .tabBar {
     text-align: center;
-    padding: 3em 0;
     .label {
       span {
         color: #606060;
@@ -28,9 +31,10 @@
 
     .packRow {
       display: flex;
-      padding: 0 3em;
+      padding: 3em;
+      justify-content: space-between;
       .packItem {
-        width: calc(100% / 4 - 1em);
+        width: calc(100% / 4 - 2em);
         padding: 2em;
         border-radius: 15px;
         display: flex;
@@ -70,6 +74,31 @@
             font-size: 2.5em;
             font-weight: $font-bold;
             margin: 1em 0;
+          }
+        }
+        &.packItem2 {
+          padding: 0;
+          border: 1px solid $primary-color;
+          overflow: hidden;
+          .top {
+            padding: 2em;
+            .price {
+              color: $color-white;
+              font-size: 2.5em;
+              font-weight: $font-bold;
+              margin-bottom: 1em;
+            }
+          }
+          .bottom {
+            background-color: $primary-color;
+            padding: 1em;
+            button {
+              border: 0;
+              background-color: transparent;
+              color: $color-white;
+              font-size: 1.1em;
+              font-weight: $font-bold;
+            }
           }
         }
       }
