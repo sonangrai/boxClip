@@ -20,6 +20,10 @@
     padding: 0.2em 0.5em;
     border-radius: 2px;
     transition: 0.3s;
+    @include sm {
+      width: 112px;
+      display: flex;
+    }
     input {
       background-color: transparent;
       border: 0;
@@ -30,6 +34,9 @@
       &::placeholder {
         color: $color-white;
         font-size: 0.8em;
+      }
+      @include sm {
+        width: 80px;
       }
     }
     button {
