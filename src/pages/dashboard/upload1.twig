@@ -39,7 +39,7 @@ contents %}
   </div>
 
   <div class="uploadDrop">
-    <div class="contents">
+    <form class="contents">
       <label for="video">
         <svg
           width="48"
@@ -61,8 +61,74 @@ contents %}
         <strong>Drag Videos to upload or Browse </strong>
         <span>by clicking anywhere inside the box</span>
       </div>
-    </div>
+    </form>
   </div>
 </div>
+
+<script>
+  (function () {
+    document.querySelectorAll("#video").forEach((inputElement) => {
+      const dropZoneElement = inputElement.closest(".uploadDrop");
+
+      dropZoneElement.addEventListener("click", (e) => {
+        inputElement.click();
+      });
+
+      inputElement.addEventListener("change", (e) => {
+        if (inputElement.files.length) {
+          updateThumbnail(dropZoneElement, inputElement.files[0]);
+        }
+      });
+
+      dropZoneElement.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZoneElement.classList.add("dragged");
+      });
+
+      ["dragleave", "dragend"].forEach((type) => {
+        dropZoneElement.addEventListener(type, (e) => {
+          dropZoneElement.classList.remove("dragged");
+        });
+      });
+
+      dropZoneElement.addEventListener("drop", (e) => {
+        e.preventDefault();
+
+        if (e.dataTransfer.files.length) {
+          inputElement.files = e.dataTransfer.files;
+          updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+        }
+
+        dropZoneElement.classList.remove("dragged");
+      });
+    });
+
+    /**
+     * Updates the thumbnail on a drop zone element.
+     *
+     * @param {HTMLElement} dropZoneElement
+     * @param {File} file
+     */
+    function updateThumbnail(dropZoneElement, file) {
+      let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+      // First time - remove the prompt
+      if (dropZoneElement.querySelector(".prompt")) {
+        dropZoneElement.querySelector(".prompt").remove();
+      }
+
+      // First time - there is no thumbnail element, so lets create it
+      if (!thumbnailElement) {
+        thumbnailElement = document.createElement("div");
+        thumbnailElement.classList.add("videoName");
+        document
+          .querySelector(".uploadDrop .contents")
+          .appendChild(thumbnailElement);
+      }
+
+      thumbnailElement.innerHTML = file.name;
+    }
+  })();
+</script>
 
 {% endblock %}

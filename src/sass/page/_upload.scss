@@ -62,4 +62,43 @@
       }
     }
   }
+
+  .uploadDrop {
+    width: 80%;
+    margin: 2em auto;
+    min-height: 336px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../img/upload/dashed.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 19px;
+    &.dragged {
+      background-color: #ffffff1f;
+    }
+    .contents {
+      text-align: center;
+      label {
+        margin-bottom: 1em;
+        svg {
+          cursor: pointer;
+        }
+        input {
+          display: none;
+        }
+      }
+      .prompt {
+        color: $color-white;
+        font-size: 1.4em;
+        strong,
+        span {
+          display: block;
+        }
+      }
+      .videoName {
+        color: $color-white;
+      }
+    }
+  }
 }
