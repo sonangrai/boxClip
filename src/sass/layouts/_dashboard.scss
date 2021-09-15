@@ -4,8 +4,21 @@
     width: 300px;
     position: sticky;
     top: 0;
+    transition: 0.3s;
+    @include lg {
+      position: fixed;
+      left: -300px;
+      top: 0;
+      z-index: 2;
+      &.slide {
+        left: 0;
+      }
+    }
   }
   main {
     width: calc(100% - 300px);
+    @include lg {
+      width: 100%;
+    }
   }
 }

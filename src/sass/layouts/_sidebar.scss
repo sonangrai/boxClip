@@ -30,6 +30,8 @@
           border-radius: 5px;
           svg {
             margin-right: 1em;
+            width: 1em;
+            height: auto;
           }
           &.active {
             background-color: $primary-color;

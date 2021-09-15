@@ -6,6 +6,15 @@
     .headRow {
       display: flex;
       justify-content: flex-end;
+      @include lg {
+        justify-content: space-between;
+      }
+      .hamMenu {
+        display: none;
+        @include lg {
+          display: block;
+        }
+      }
       .searchPrt {
         display: flex;
         align-items: center;

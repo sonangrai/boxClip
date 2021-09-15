@@ -162,13 +162,31 @@
     </ul>
   </div>
 </div>
+
+<script></script>
 </aside>
       <main>
 <div class="uploadPage">
   <div class="top">
-    <div class="headRow">
-      <div class="searchPrt">
-        <!-- Search widget -->
+  <div class="headRow">
+    <div class="hamMenu">
+      <span class="hamMe">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z"
+            fill="#fff"
+          ></path>
+        </svg>
+      </span>
+    </div>
+    <div class="searchPrt">
+      <!-- Search widget -->
 <div class="searchBox">
   <span class="searchOpen">
     <svg
@@ -229,12 +247,34 @@
   })();
 </script>
 
-        <div class="fav">
-          <img src="../../img/common/fav.png" alt="" />
-        </div>
+      <div class="fav">
+        <img src="../../../img/common/fav.png" alt="" />
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  (function () {
+    let ham = document.querySelector(".hamMe");
+    let sideBar = document.querySelector(".dashboardPage aside");
+    ham.addEventListener("click", () => {
+      sideBar.classList.add("slide");
+    });
+
+    //For closing
+    document.addEventListener("click", function (event) {
+      let isClickInside = sideBar.contains(event.target);
+      let isClickInside2 = ham.contains(event.target);
+
+      if (!isClickInside && !isClickInside2) {
+        //the click was outside the specifiedElement, do something
+        sideBar.classList.remove("slide");
+      }
+    });
+  })();
+</script>
+
 
   <div class="timelineUpload">
     <div class="linear">
