@@ -12,6 +12,57 @@ contents %}
       </div>
     </div>
   </div>
+
+  <div class="timelineUpload">
+    <div class="linear">
+      <div class="stage passed">
+        <div class="circle">
+          <span>Upload</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="circle">
+          <span>Meta</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="circle">
+          <span>Privacy</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="circle">
+          <span>Publish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uploadDrop">
+    <div class="contents">
+      <label for="video">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="24" cy="24" r="24" fill="#437CC8" />
+          <path
+            d="M23.5 14L16 32.29L16.71 33L23.5 30L30.29 33L31 32.29L23.5 14Z"
+            fill="white"
+          />
+        </svg>
+
+        <input type="file" id="video" accept="video/*" />
+      </label>
+      <div class="prompt">
+        <strong>Drag Videos to upload or Browse </strong>
+        <span>by clicking anywhere inside the box</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
