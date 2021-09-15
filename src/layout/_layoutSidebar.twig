@@ -40,7 +40,10 @@
     %} #}
   </head>
   <body>
-    {% include "_sidebar.twig" %} {% block contents %}{% endblock %}
+    <div class="dashboardPage">
+      <aside>{% include "_sidebar.twig" %}</aside>
+      <main>{% block contents %}{% endblock %}</main>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

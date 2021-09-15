@@ -1,0 +1,44 @@
+.sidebar {
+  background-color: #272626;
+  min-height: 100vh;
+  padding: 3em;
+  .logo {
+    padding: 3em 0;
+    img {
+      width: 110px;
+    }
+  }
+
+  .boxMenu {
+    padding: 0.5em;
+    .sideMenu {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      .menuItem {
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .linkItem {
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.4em;
+          display: flex;
+          align-items: center;
+          padding: 0.6em 1em;
+          border-radius: 5px;
+          svg {
+            margin-right: 1em;
+          }
+          &.active {
+            background-color: $primary-color;
+            svg path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
