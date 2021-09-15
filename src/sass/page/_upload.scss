@@ -1,0 +1,18 @@
+.uploadPage {
+  background-color: #141414;
+  min-height: 100vh;
+  padding: 3em;
+  .top {
+    .headRow {
+      display: flex;
+      justify-content: flex-end;
+      .searchPrt {
+        display: flex;
+        align-items: center;
+        .fav {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}

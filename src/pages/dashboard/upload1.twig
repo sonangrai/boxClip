@@ -1,9 +1,17 @@
 {% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Upload Step 1
 - Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block
 contents %}
-
 <div class="uploadPage">
-  <div class="top"></div>
+  <div class="top">
+    <div class="headRow">
+      <div class="searchPrt">
+        {% include "../auth/component/_search.twig" %}
+        <div class="fav">
+          <img src="../../img/common/fav.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
