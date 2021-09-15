@@ -66,6 +66,10 @@
             bottom: calc(100% + 4px);
             left: 50%;
             transform: translateX(-50%);
+            @include sm {
+              font-size: 1em;
+              transform: rotate(320deg) translateX(10px);
+            }
           }
         }
       }
@@ -103,6 +107,9 @@
         strong,
         span {
           display: block;
+        }
+        @include sm {
+          font-size: 1.1em;
         }
       }
       .videoName {
