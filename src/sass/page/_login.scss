@@ -1,125 +1,89 @@
 .loginPage {
   height: 100vh;
-  width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/login/logBg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-
+  .logPho {
+    height: 100vh;
+    width: 870px;
+    overflow: hidden;
+  }
   .loginCard {
-    background-color: #212121de;
-    border-radius: $radius;
-    border: 1px solid #8b8b8b;
-    padding: 2em;
-    min-width: 500px;
-    @include sm {
-      min-width: 90%;
-    }
-  }
-  .topLogo {
-    text-align: center;
-    margin: 1em 0;
-  }
-  .logForm {
-    .label {
-      color: $color-white;
-      font-size: 1.2em;
-      font-weight: $font-bold;
-      margin-bottom: 2em;
-    }
-  }
-
-  .bottomPrt {
-    margin: 1em 0;
+    width: calc(100% - 870px);
+    background-color: $back-black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include sm {
-      flex-wrap: wrap;
-      flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 4em;
+
+    .topLogo {
+      img {
+        width: 140px;
+      }
     }
-    .texts {
-      .signUp,
-      .forgot {
-        display: block;
+    .label {
+      margin-bottom: 2em;
+      span {
         color: $color-white;
-        a {
-          color: $color-white;
-        }
-      }
-      @include sm {
-        width: 100%;
+        font-weight: $font-bold;
+        font-size: 1.6em;
       }
     }
-    .logUser {
-      @include sm {
-        width: 100%;
-        margin-bottom: 1em;
+    .fFlex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        color: #aeaeae;
+        font-size: 1.1em;
+        text-decoration: none;
+        font-weight: $font-bold;
+      }
+    }
+    .pBtn {
+      min-width: 160px;
+    }
+    .signMe {
+      margin-top: 1em;
+      color: $color-white;
+      font-size: 1.1em;
+      a {
+        text-decoration: none;
+        color: $color-white;
       }
     }
   }
 }
 
-.signupModal {
-  background-color: #212121;
-  border-radius: 23px;
-  border: 1px solid $primary-color;
-  padding: 3em;
-  .modal-body {
-    padding: 0;
-  }
-  .topHead {
-    strong {
+//Oauth
+.oauth {
+  display: flex;
+  margin-bottom: 2em;
+  .butcons {
+    border-radius: 5px;
+    transition: 0.3s;
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.8em 1em;
       color: $color-white;
-      display: block;
-      font-weight: $font-bold;
-      font-size: 1.1em;
-    }
-    span {
-      color: $color-white;
-      display: block;
-      font-weight: $font-light;
-    }
-  }
-  .oauth {
-    display: flex;
-    margin: 1.5em 0;
-    @include sm {
-      flex-wrap: wrap;
-    }
-    .butcons {
-      @include sm {
-        width: 100%;
-        margin-bottom: 1em;
+      text-decoration: none;
+      img {
+        margin-right: 0.5em;
       }
+    }
+    &:first-child {
+      border: 1px solid #ea4335;
+      background-color: #3b2524;
       margin-right: 1em;
-      border-radius: 5px;
-      a {
-        display: block;
-        padding: 0.8em;
-        text-decoration: none;
-        color: $color-white;
-        font-size: 0.8em;
-        img {
-          margin-right: 10px;
-        }
-      }
-      &:first-child {
-        border: 1px solid $primary-color;
-        background-color: #1877f238;
-      }
-      &:last-child {
-        border: 1px solid #ea4335;
-        background-color: #ea43352e;
+      &:hover {
+        background-color: #ea4335;
       }
     }
-  }
-
-  .bottomPrt {
-    .signUser {
-      text-align: right;
+    &:last-child {
+      border: 1px solid #1877f2;
+      background-color: #1877f229;
+      &:hover {
+        background-color: #1877f2;
+      }
     }
   }
 }

@@ -1,53 +1,19 @@
-//material Input
-.mformItem {
-  position: relative;
-}
-.minput {
-  background-color: transparent;
-  border: 0;
-  width: 100%;
-  color: $color-white;
-  border-bottom: 1px solid #585858;
-  padding: 0.5em 0;
-  transition: 0.3s;
-  &:focus {
-    outline: 0;
-    ~ .mlabel {
-      color: $color-white;
-      transform: scale(0.6);
-    }
-  }
-  &.mshow {
-    ~ .mlabel {
-      color: $color-white;
-      transform: scale(0.6);
-    }
-  }
-  &::-webkit-input-placeholder {
-    transition: color 300ms ease;
-  }
-  &:not(:focus)::-webkit-input-placeholder {
-    color: transparent;
-  }
-}
-.mlabel {
-  position: absolute;
-  color: #aeaeae;
-  left: 0;
-  top: 0;
-  transform-origin: 0 -150%;
-  transition: transform 300ms ease;
-}
-
 //Form
 .formItem {
   margin-bottom: 2em;
-  label {
+  .form-label {
+    font-size: 1.2em;
     color: $color-white;
-    a {
-      color: $primary-color;
-      text-decoration: none;
-    }
+  }
+  .form-control {
+    background-color: transparent;
+    border: 1px solid #808080;
+    padding: 0 0.5em;
+    height: 43px;
+    color: $color-white;
+  }
+  .form-check-label {
+    color: #aeaeae;
   }
 }
 .inline-form {

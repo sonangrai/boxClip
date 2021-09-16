@@ -43,6 +43,9 @@
     
 
 <div class="loginPage">
+  <div class="logPho">
+    <img src="../../img/login/logIllus.png" alt="" />
+  </div>
   <div class="loginCard">
     <div class="topLogo">
       <img src="../../img/common/logo.png" alt="boxClip" />
@@ -50,37 +53,53 @@
     <div class="logForm">
       <div class="label"><span>Sign In</span></div>
 
+      <div class="oauth">
+        <div class="butcons">
+          <a href="#!">
+            <img src="../../img/login/ggl.png" alt="" />
+            <span>Sign Up with Google</span>
+          </a>
+        </div>
+        <div class="butcons">
+          <a href="#!">
+            <img src="../../img/login/fb.png" alt="" />
+            <span>Sign Up with Facebook</span>
+          </a>
+        </div>
+      </div>
+
       <form action="">
-        <div class="formItem mformItem">
+        <div class="formItem">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
           <input
-            class="minput"
             type="email"
-            id="email"
-            placeholder="Email Address"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
           />
-          <label class="mlabel" for="email">Email Address</label>
         </div>
-        <div class="formItem mformItem">
+        <div class="formItem">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
-            class="minput"
             type="password"
-            id="password"
-            placeholder="Passwod"
+            class="form-control"
+            id="exampleInputPassword1"
           />
-          <label class="mlabel" for="password">Password</label>
         </div>
-        <div class="bottomPrt">
-          <div class="texts">
-            <span class="signUp"
-              >Don’t have an account? <a href="./type">Sign Up</a></span
+        <div class="formItem form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <div class="fFlex">
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
             >
-            <span class="forgot"
-              ><a href="./auth/forgot">Forgot Password?</a></span
-            >
+            <a href="">Forgot Password</a>
           </div>
-          <div class="logUser">
-            <input type="submit" class="pBtn" value="Sign In" id="" />
-          </div>
+        </div>
+        <button type="submit" class="btn pBtn">Sign In</button>
+        <div class="signMe">
+          Don’t have an account? <a href="./pages/signup"> Sign Up </a>
         </div>
       </form>
     </div>
