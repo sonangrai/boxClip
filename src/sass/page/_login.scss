@@ -78,6 +78,96 @@
   }
 }
 
+.signPage {
+  height: 100vh;
+  display: flex;
+  .logPho {
+    height: 100vh;
+    width: 500px;
+    overflow: hidden;
+    @include xxl {
+      width: 60%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    @include xl {
+      width: 50%;
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .loginCard {
+    width: calc(100% - 500px);
+    background-color: $back-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 4em;
+    @include xxl {
+      width: calc(100% - 60%);
+    }
+    @include xl {
+      width: 50%;
+    }
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      padding: 1em;
+    }
+    .topLogo {
+      img {
+        width: 140px;
+      }
+    }
+    .label {
+      margin-bottom: 2em;
+      span {
+        color: $color-white;
+        font-weight: $font-bold;
+        font-size: 1.6em;
+        display: block;
+      }
+      small {
+        color: $color-white;
+        font-size: 1.2em;
+      }
+    }
+    .fFlex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      label {
+        a {
+          color: $primary-color;
+        }
+      }
+      a {
+        color: #aeaeae;
+        font-size: 1.1em;
+        text-decoration: none;
+        font-weight: $font-bold;
+      }
+    }
+    .pBtn {
+      min-width: 160px;
+    }
+    .signMe {
+      margin-top: 1em;
+      color: $color-white;
+      font-size: 1.1em;
+      a {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+  }
+}
+
 //Oauth
 .oauth {
   display: flex;
