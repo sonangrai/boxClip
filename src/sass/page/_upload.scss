@@ -18,7 +18,8 @@
       .searchPrt {
         display: flex;
         align-items: center;
-        .fav {
+        .fav,
+        .upload {
           margin-left: 1em;
         }
       }
