@@ -96,6 +96,11 @@
             font-weight: $font-bold;
             margin: 1em 0;
           }
+          .button {
+            a {
+              text-decoration: none;
+            }
+          }
         }
         &.packItem2 {
           padding: 0;
@@ -113,12 +118,12 @@
           .bottom {
             background-color: $primary-color;
             padding: 1em;
-            button {
-              border: 0;
-              background-color: transparent;
-              color: $color-white;
-              font-size: 1.1em;
-              font-weight: $font-bold;
+
+            .button {
+              a {
+                text-decoration: none;
+                color: $color-white;
+              }
             }
           }
         }
