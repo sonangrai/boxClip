@@ -109,6 +109,9 @@
     display: flex;
     justify-content: space-between;
     .sideTog {
+      @include lg {
+        display: none;
+      }
       svg {
         cursor: pointer;
         &.opened {
@@ -126,13 +129,18 @@
         }
       }
     }
-    img {
-      width: 120px;
+    .homeMe {
+      @include sm {
+        display: none;
+      }
+      img {
+        width: 120px;
+      }
     }
     .hamMenu {
       display: none;
       @include lg {
-        display: block;
+        display: inline-block;
       }
     }
     .searchPrt {

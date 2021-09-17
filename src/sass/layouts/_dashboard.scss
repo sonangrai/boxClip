@@ -5,6 +5,16 @@
       width: 300px;
       position: sticky;
       top: 0;
+      @include lg {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 2;
+        width: 300px;
+        &.slide {
+          left: 0;
+        }
+      }
     }
   }
   aside {
@@ -16,6 +26,7 @@
       left: -300px;
       top: 0;
       z-index: 2;
+      width: 300px;
       &.slide {
         left: 0;
       }
@@ -29,6 +40,9 @@
   &.openedSide {
     main {
       width: calc(100% - 300px);
+      @include lg {
+        width: 100%;
+      }
     }
   }
   main {
