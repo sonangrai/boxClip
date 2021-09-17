@@ -103,7 +103,11 @@
 }
 
 //Dashboard Header common
-
+.dashboardPage.openedSide {
+  .homeMe {
+    display: none;
+  }
+}
 .top {
   margin-bottom: 2em;
   .headRow {
