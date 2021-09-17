@@ -2,29 +2,6 @@
   background-color: #141414;
   min-height: 100vh;
   padding: 3em;
-  .top {
-    .headRow {
-      display: flex;
-      justify-content: flex-end;
-      @include lg {
-        justify-content: space-between;
-      }
-      .hamMenu {
-        display: none;
-        @include lg {
-          display: block;
-        }
-      }
-      .searchPrt {
-        display: flex;
-        align-items: center;
-        .fav,
-        .upload {
-          margin-left: 1em;
-        }
-      }
-    }
-  }
 
   .timelineUpload {
     margin-top: 4em;

@@ -101,3 +101,33 @@
     color: $color-white;
   }
 }
+
+//Dashboard Header common
+
+.top {
+  .headRow {
+    display: flex;
+    justify-content: space-between;
+    .sideTog {
+      svg {
+      }
+    }
+    img {
+      width: 120px;
+    }
+    .hamMenu {
+      display: none;
+      @include lg {
+        display: block;
+      }
+    }
+    .searchPrt {
+      display: flex;
+      align-items: center;
+      .fav,
+      .upload {
+        margin-left: 1em;
+      }
+    }
+  }
+}
