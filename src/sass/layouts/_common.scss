@@ -110,6 +110,20 @@
     justify-content: space-between;
     .sideTog {
       svg {
+        cursor: pointer;
+        &.opened {
+          display: none;
+        }
+      }
+      &.sideshow {
+        svg {
+          &.opened {
+            display: inline-block;
+          }
+          &.closed {
+            display: none;
+          }
+        }
       }
     }
     img {

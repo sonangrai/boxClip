@@ -106,5 +106,10 @@
     /**
      *Sidebar togg
      */
+    let sideTog = document.querySelector(".sideTog");
+    sideTog.addEventListener("click", () => {
+      sideTog.classList.toggle("sideshow");
+      sideBar.parentNode.classList.toggle("openedSide");
+    });
   })();
 </script>
