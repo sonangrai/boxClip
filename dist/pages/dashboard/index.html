@@ -166,6 +166,7 @@ Boxclip </title>
 <script></script>
 </aside>
       <main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 
 <div class="dashboardHome">
   <div class="top">
@@ -364,11 +365,25 @@ Boxclip </title>
         </div>
       </div>
     </div>
-    <div class="tileCard uploadStat"></div>
+    <div class="tileCard uploadStat">
+      <canvas id="myChart"></canvas>
+    </div>
 
-    <div class="tileCard"></div>
+    <div class="tileCard popularGroup">
+      <div class="title">Popular Groups</div>
+      <div class="tags">
+        <div class="pBtn tagItem">Classics</div>
+        <div class="pBtn tagItem">Documentry</div>
+        <div class="pBtn tagItem">Drama</div>
+        <div class="pBtn tagItem">Animie</div>
+        <div class="pBtn tagItem">Horror</div>
+        <div class="pBtn tagItem">Thriller</div>
+        <div class="pBtn tagItem">Action</div>
+        <div class="pBtn tagItem">Kids & Family</div>
+      </div>
+    </div>
 
-    <div class="tileCard counterTile">
+    <div class="tileCard counterTile videoTile">
       <div class="icon">
         <svg
           width="36"
@@ -389,7 +404,7 @@ Boxclip </title>
       </div>
     </div>
 
-    <div class="tileCard counterTile">
+    <div class="tileCard counterTile viewTile">
       <div class="icon">
         <svg
           width="32"
@@ -410,11 +425,58 @@ Boxclip </title>
       </div>
     </div>
 
-    <div class="tileCard"></div>
+    <div class="tileCard trendingVideo">
+      <div class="title">Trending Videos</div>
+      <div class="videoRow">
+        <a class="vidItem" href="#!">
+          <div class="row">
+            <div class="col-6">
+              <div class="img">
+                <img src="../../img/dashboard/vid1.png" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vidInfo">
+                <div class="vidTitle">4th of July, 2020</div>
+                <div class="vidDate">Dec 12, 2020</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="vidItem" href="#!">
+          <div class="row">
+            <div class="col-6">
+              <div class="img">
+                <img src="../../img/dashboard/vid2.png" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vidInfo">
+                <div class="vidTitle">The Big Island</div>
+                <div class="vidDate">Nov 17, 2020</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="vidItem" href="#!">
+          <div class="row">
+            <div class="col-6">
+              <div class="img">
+                <img src="../../img/dashboard/vid3.png" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vidInfo">
+                <div class="vidTitle">Wesley Takes the M&M Test</div>
+                <div class="vidDate">Mar 21, 2021</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
 
-    <div class="tileCard"></div>
-
-    <div class="tileCard counterTile">
+    <div class="tileCard counterTile clientTile">
       <div class="icon">
         <svg
           width="29"
@@ -435,7 +497,7 @@ Boxclip </title>
       </div>
     </div>
 
-    <div class="tileCard counterTile">
+    <div class="tileCard counterTile commentTile">
       <div class="icon">
         <svg
           width="20"
@@ -451,7 +513,7 @@ Boxclip </title>
         </svg>
       </div>
       <div class="counter">
-        <div class="title">Commonts</div>
+        <div class="title">Comments</div>
         <div class="count">22</div>
       </div>
     </div>
@@ -461,6 +523,51 @@ Boxclip </title>
     <div class="tileCard"></div>
   </div>
 </div>
+
+<script>
+  const labels = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Nov",
+    "Dec",
+  ];
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Upload Statistics",
+        backgroundColor: "#8A8484",
+        borderColor: "#fff846",
+        data: [4, 3, 1, 4, 8, 9, 8, 2, 1, 0, 2, 0],
+        tension: 0.3,
+      },
+    ],
+  };
+  const config = {
+    type: "line",
+    data: data,
+    legend: {
+      display: false,
+    },
+    options: {
+      responsive: true,
+    },
+    plugins: {
+      datalabels: {
+        display: false,
+      },
+    },
+  };
+  var ctx = document.getElementById("myChart").getContext("2d");
+  window.myLine = new Chart(ctx, config);
+</script>
 
 </main>
     </div>

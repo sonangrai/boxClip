@@ -75,4 +75,81 @@
       font-size: 1.6em;
     }
   }
+  &.videoTile {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  &.viewTile {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  &.clientTile {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  &.commentTile {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+.uploadStat {
+  border: 1px solid $color-marker;
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  display: flex;
+  align-items: center;
+}
+.popularGroup {
+  grid-column: 4;
+  grid-row: 1;
+  .title {
+    font-weight: $font-bold;
+    color: #8a8484;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    .tagItem {
+      margin-top: 1em;
+      margin-right: 1em;
+      padding: 0.4em 1em;
+      font-weight: $font-regular;
+      font-size: 0.8em;
+    }
+  }
+}
+.trendingVideo {
+  grid-column: 4;
+  grid-row: 2 / span 4;
+  .title {
+    font-size: 1.4em;
+    font-weight: $font-sbold;
+    color: $color-white;
+  }
+  .videoRow {
+    .vidItem {
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #717171;
+      overflow: hidden;
+      margin-top: 1em;
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .vidInfo {
+      padding: 1em 1em 0 0;
+      .vidTitle {
+        font-size: 0.9em;
+        font-weight: $font-bold;
+        color: $color-white;
+      }
+      .vidDate {
+        font-size: 0.8em;
+        color: #8a8484;
+      }
+    }
+  }
 }
