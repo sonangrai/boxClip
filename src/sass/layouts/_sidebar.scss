@@ -12,7 +12,7 @@
     }
     .close {
       cursor: pointer;
-      @include md {
+      @include lg {
         display: none;
       }
       svg {
