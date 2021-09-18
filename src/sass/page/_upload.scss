@@ -98,4 +98,45 @@
       }
     }
   }
+
+  .metaBox {
+    .thumbPart {
+      .selectedThumb {
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid #595959;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .miniThumb {
+        margin: 2em auto;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 60%;
+        .mThmb {
+          border-radius: 11px;
+          overflow: hidden;
+          border: 1px solid #595959;
+          &.uploader {
+            cursor: pointer;
+            padding: 1em;
+            text-align: center;
+            background-color: #474747;
+            label {
+              cursor: pointer;
+              span {
+                color: $color-white;
+                font-size: 0.7em;
+              }
+            }
+            input {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

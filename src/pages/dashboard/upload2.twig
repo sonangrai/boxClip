@@ -28,72 +28,34 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
       </div>
     </div>
   </div>
+
+  <div class="metaBox">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="thumbPart">
+            <div class="selectedThumb">
+              <img id="choosenThumb" src="../../img/upload/thumb1.png" alt="" />
+            </div>
+            <div class="miniThumb">
+              <div class="mThmb">
+                <img id="mt1" src="../../img//upload/thumb2.png" alt="" />
+              </div>
+              <div class="mThmb">
+                <img id="mt2" src="../../img//upload/thumb3.png" alt="" />
+              </div>
+              <div class="mThmb uploader">
+                <label for="uTh">
+                  <input type="file" id="uTh" accept="image/*" />
+                  <span>Upload<br />New Thumbnail</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<script>
-  (function () {
-    document.querySelectorAll("#video").forEach((inputElement) => {
-      const dropZoneElement = inputElement.closest(".uploadDrop");
-
-      dropZoneElement.addEventListener("click", (e) => {
-        inputElement.click();
-      });
-
-      inputElement.addEventListener("change", (e) => {
-        if (inputElement.files.length) {
-          updateThumbnail(dropZoneElement, inputElement.files[0]);
-        }
-      });
-
-      dropZoneElement.addEventListener("dragover", (e) => {
-        e.preventDefault();
-        dropZoneElement.classList.add("dragged");
-      });
-
-      ["dragleave", "dragend"].forEach((type) => {
-        dropZoneElement.addEventListener(type, (e) => {
-          dropZoneElement.classList.remove("dragged");
-        });
-      });
-
-      dropZoneElement.addEventListener("drop", (e) => {
-        e.preventDefault();
-
-        if (e.dataTransfer.files.length) {
-          inputElement.files = e.dataTransfer.files;
-          updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-        }
-
-        dropZoneElement.classList.remove("dragged");
-      });
-    });
-
-    /**
-     * Updates the thumbnail on a drop zone element.
-     *
-     * @param {HTMLElement} dropZoneElement
-     * @param {File} file
-     */
-    function updateThumbnail(dropZoneElement, file) {
-      let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-      // First time - remove the prompt
-      if (dropZoneElement.querySelector(".prompt")) {
-        dropZoneElement.querySelector(".prompt").remove();
-      }
-
-      // First time - there is no thumbnail element, so lets create it
-      if (!thumbnailElement) {
-        thumbnailElement = document.createElement("div");
-        thumbnailElement.classList.add("videoName");
-        document
-          .querySelector(".uploadDrop .contents")
-          .appendChild(thumbnailElement);
-      }
-
-      thumbnailElement.innerHTML = file.name;
-    }
-  })();
-</script>
 
 {% endblock %}
