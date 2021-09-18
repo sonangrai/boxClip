@@ -102,12 +102,15 @@
   .metaBox {
     .thumbPart {
       .selectedThumb {
+        margin: 0 auto;
+        width: 500px;
         border-radius: 24px;
         overflow: hidden;
         border: 1px solid #595959;
         img {
           width: 100%;
-          height: auto;
+          height: 400px;
+          object-fit: cover;
         }
       }
       .miniThumb {
@@ -116,10 +119,13 @@
         justify-content: space-evenly;
         max-width: 60%;
         .mThmb {
+          width: 70px;
+          height: 70px;
           border-radius: 11px;
           overflow: hidden;
           border: 1px solid #595959;
           position: relative;
+          cursor: pointer;
           span#removeCust {
             position: absolute;
             width: 18px;
@@ -135,20 +141,23 @@
             cursor: pointer;
           }
           img {
-            height: 70px;
-            width: 70px;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
           }
           &.uploader {
             cursor: pointer;
-            padding: 1em;
+            padding: 0.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             background-color: #474747;
             label {
               cursor: pointer;
               span {
                 color: $color-white;
-                font-size: 0.7em;
+                font-size: 0.6em;
               }
             }
             input {

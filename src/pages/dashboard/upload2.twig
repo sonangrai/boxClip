@@ -60,6 +60,8 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 
 <script>
   (function () {
+    let mainThumb = document.querySelector("#choosenThumb");
+    let defaultImg = mainThumb.src;
     //Creating object
     let containerThumb = document.querySelector(".miniThumb");
     let thePreview = document.createElement("div");
@@ -78,6 +80,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
         imgPart.src = URL.createObjectURL(file);
         thePreview.appendChild(imgPart);
         containerThumb.appendChild(thePreview);
+        mainThumb.src = URL.createObjectURL(file);
         custAdded = true;
         //HIde uploader
         document.querySelector(".uploader.mThmb").style.display = "none";
@@ -87,7 +90,16 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
     remover.addEventListener("click", () => {
       thePreview.remove();
       custAdded = false;
+      mainThumb.src = defaultImg;
       document.querySelector(".uploader.mThmb").style.display = "block";
+    });
+
+    //CLick change primary
+    let thumbs = document.querySelectorAll(".mThmb img");
+    thumbs.forEach((t) => {
+      t.addEventListener("click", () => {
+        mainThumb.src = t.src;
+      });
     });
   })();
 </script>
