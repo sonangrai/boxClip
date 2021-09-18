@@ -1,0 +1,17 @@
+.uploading {
+  .done {
+    text-align: right;
+    margin-bottom: 0.5em;
+    span {
+      color: $color-white;
+      font-weight: $font-bold;
+      font-size: 1.6em;
+    }
+  }
+  .progress {
+    background-color: #343434;
+    .progress-bar {
+      background-color: $primary-color;
+    }
+  }
+}
