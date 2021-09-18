@@ -233,8 +233,46 @@
     }
   }
 }
-//Tagify
 
+.privacyMeta {
+  margin-top: 2em;
+  .whoCan {
+    padding: 2em;
+    border-radius: 8px;
+    border: 1px solid #7b7b7b;
+    .title {
+      color: $color-white;
+      font-size: 1.1em;
+    }
+    .form-check {
+      margin-top: 1em;
+    }
+    .form-check-input {
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid $primary-color;
+    }
+    .form-check-input:checked[type="radio"] {
+      background-image: unset;
+    }
+    .form-check-input:checked {
+      background-color: $primary-color;
+    }
+    .form-check-label {
+      color: $color-white;
+      strong {
+        display: block;
+        font-size: 1.1em;
+      }
+      span {
+        display: block;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+//Tagify
 .form-control.customLook {
   --tag-bg: #333;
   --tag-hover: #777;

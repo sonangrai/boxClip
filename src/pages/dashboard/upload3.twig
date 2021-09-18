@@ -1,0 +1,103 @@
+{% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Upload
+Privacy - Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block
+contents %}
+
+<div class="uploadPage">
+  {% include "./components/_header.twig" %}
+
+  <div class="timelineUpload">
+    <div class="linear">
+      <div class="stage passed">
+        <div class="circle">
+          <span>Upload</span>
+        </div>
+      </div>
+      <div class="stage passed">
+        <div class="circle">
+          <span>Meta</span>
+        </div>
+      </div>
+      <div class="stage passed">
+        <div class="circle">
+          <span>Privacy</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="circle">
+          <span>Publish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="metaBox">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6">
+          <div class="thumbPart">
+            <div class="selectedThumb">
+              <img id="choosenThumb" src="../../img/upload/thumb1.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6">
+          {% include "./components/_loading.twig" %}
+
+          <div class="privacyMeta">
+            <div class="whoCan">
+              <div class="title">Who can watch your videos?</div>
+              <form action="">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="allow"
+                    id="private"
+                  />
+                  <label class="form-check-label" for="private">
+                    <strong>Private</strong>
+                    <span
+                      >Only you and people you choose can watch the videos</span
+                    >
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="allow"
+                    id="Unlisted"
+                  />
+                  <label class="form-check-label" for="Unlisted">
+                    <strong>Unlisted</strong>
+                    <span
+                      >Only you and people you choose can watch the videos</span
+                    >
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="allow"
+                    id="public"
+                    checked
+                  />
+                  <label class="form-check-label" for="public">
+                    <strong>Public</strong>
+                    <span
+                      >Only you and people you choose can watch the videos</span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
