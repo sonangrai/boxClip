@@ -405,6 +405,40 @@ Boxclip </title>
   </div>
 </div>
 
+<script>
+  (function () {
+    //Creating object
+    let containerThumb = document.querySelector(".miniThumb");
+    let thePreview = document.createElement("div");
+    thePreview.className = "mThmb";
+    let remover = document.createElement("span");
+    remover.id = "removeCust";
+    remover.innerHTML = "X";
+    thePreview.appendChild(remover);
+    let imgPart = document.createElement("img");
+    imgPart.id = "customThumb";
+    let custAdded = false;
+
+    uTh.onchange = (evt) => {
+      const [file] = uTh.files;
+      if (file) {
+        imgPart.src = URL.createObjectURL(file);
+        thePreview.appendChild(imgPart);
+        containerThumb.appendChild(thePreview);
+        custAdded = true;
+        //HIde uploader
+        document.querySelector(".uploader.mThmb").style.display = "none";
+      }
+    };
+
+    remover.addEventListener("click", () => {
+      thePreview.remove();
+      custAdded = false;
+      document.querySelector(".uploader.mThmb").style.display = "block";
+    });
+  })();
+</script>
+
 </main>
     </div>
 
