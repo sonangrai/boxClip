@@ -110,6 +110,10 @@
 }
 .top {
   margin-bottom: 2em;
+  .headLogo {
+    display: flex;
+    align-items: center;
+  }
   .headRow {
     display: flex;
     justify-content: space-between;
@@ -158,6 +162,84 @@
       .fav,
       .upload {
         margin-left: 1em;
+      }
+    }
+  }
+}
+
+.uploadingStat {
+  margin-left: 2em;
+  min-width: 600px;
+  .upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4em;
+    .stat {
+      color: $color-white;
+      .title {
+        font-weight: $font-bold;
+        font-size: 1.1em;
+        text-transform: uppercase;
+      }
+      .rem {
+        display: flex;
+        .done {
+          color: #8a8a8a;
+        }
+        .doing {
+          padding-left: 1em;
+          font-size: 0.9em;
+          color: #c4c4c4;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 4px;
+            right: calc(100% - 0.7em);
+            top: calc(50% - 4px);
+            background-color: #8a8a8a;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      .acBtn {
+        cursor: pointer;
+        margin-left: 0.4em;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 0.8em;
+        }
+        &.continue {
+          background-color: green;
+        }
+        &.pause {
+          background-color: #b1d0ff;
+        }
+        &.cancel {
+          background-color: #ffa6a6;
+        }
+      }
+    }
+  }
+  .lower {
+    .progress {
+      background-color: #343434;
+      height: 0.6em;
+      .progress-bar {
+        background-color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
