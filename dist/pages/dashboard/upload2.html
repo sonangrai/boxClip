@@ -434,11 +434,15 @@ Boxclip </title>
       }
     };
 
+    imgPart.addEventListener("click", (e) => {
+      mainThumb.src = e.target.src;
+    });
+
     remover.addEventListener("click", () => {
       thePreview.remove();
       custAdded = false;
       mainThumb.src = defaultImg;
-      document.querySelector(".uploader.mThmb").style.display = "block";
+      document.querySelector(".uploader.mThmb").style.display = "flex";
     });
 
     //CLick change primary
