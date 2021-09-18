@@ -459,12 +459,71 @@ Privacy - Boxclip </title>
                 </div>
               </form>
             </div>
+
+            <div class="whoCan mt-4">
+              <div class="title">Who can watch your videos?</div>
+              <form action="">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="publish"
+                    id="schedule"
+                  />
+                  <label class="form-check-label" for="schedule">
+                    <strong>Schedule</strong>
+                    <span>You can schedule your video to be published</span>
+                  </label>
+                </div>
+                <div class="formItem childDate">
+                  <label for="pdate" class="form-label">Pick Date</label>
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="pdate"
+                  />
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="publish"
+                    id="pNow"
+                    checked
+                  />
+                  <label class="form-check-label" for="pNow">
+                    <strong>Publish Now</strong>
+                    <span>Publish after video upload is completed.</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="surf">
+            <a href="./upload4" class="pBtn"
+              >Next <i class="bi bi-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  let schedule = document.querySelectorAll("input[name=publish]");
+  schedule.forEach((s) => {
+    s.addEventListener("change", () => {
+      if (s.id === "schedule") {
+        document.querySelector(".childDate").style.display = "block";
+      } else {
+        document.querySelector(".childDate").style.display = "none";
+      }
+    });
+  });
+</script>
 
 </main>
     </div>

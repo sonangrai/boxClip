@@ -269,6 +269,18 @@
         font-size: 0.9em;
       }
     }
+
+    .childDate {
+      margin-left: 2em;
+      display: none;
+      .form-label {
+        color: #808080;
+        font-size: 0.9em;
+      }
+      .form-control {
+        color: $color-white;
+      }
+    }
   }
 }
 
