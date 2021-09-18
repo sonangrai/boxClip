@@ -284,6 +284,22 @@
   }
 }
 
+.vidReady {
+  .publishCnt {
+    margin-top: 2em;
+    strong {
+      display: block;
+      font-size: 3em;
+      color: $color-white;
+      margin-bottom: 1em;
+    }
+    a {
+      text-decoration: none;
+      padding: 0.5em 1em;
+    }
+  }
+}
+
 //Tagify
 .form-control.customLook {
   --tag-bg: #333;

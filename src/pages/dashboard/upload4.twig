@@ -1,0 +1,72 @@
+{% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Upload
+Publish - Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block
+contents %}
+
+<div class="uploadPage">
+  {% include "./components/_header.twig" %}
+
+  <div class="timelineUpload">
+    <div class="linear">
+      <div class="stage passed">
+        <div class="circle">
+          <span>Upload</span>
+        </div>
+      </div>
+      <div class="stage passed">
+        <div class="circle">
+          <span>Meta</span>
+        </div>
+      </div>
+      <div class="stage passed">
+        <div class="circle">
+          <span>Privacy</span>
+        </div>
+      </div>
+      <div class="stage passed">
+        <div class="circle">
+          <span>Publish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="metaBox">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6">
+          <div class="thumbPart">
+            <div class="selectedThumb">
+              <img id="choosenThumb" src="../../img/upload/thumb1.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6">
+          {% include "./components/_loading.twig" %}
+
+          <div class="vidReady">
+            <div class="publishCnt">
+              <strong>Your video is ready to be Published </strong>
+              <a href="./upload4" class="pBtn">Publish </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let schedule = document.querySelectorAll("input[name=publish]");
+  schedule.forEach((s) => {
+    s.addEventListener("change", () => {
+      if (s.id === "schedule") {
+        document.querySelector(".childDate").style.display = "block";
+      } else {
+        document.querySelector(".childDate").style.display = "none";
+      }
+    });
+  });
+</script>
+
+{% endblock %}
