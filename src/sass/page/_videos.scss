@@ -1,0 +1,187 @@
+.videoListings {
+  .topper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #999999;
+    @include sm {
+      flex-wrap: wrap;
+    }
+    .lf {
+      display: flex;
+      align-items: center;
+      @include sm {
+        justify-content: space-between;
+        width: 100%;
+      }
+      span {
+        font-size: 1.6em;
+        font-weight: $font-bold;
+        color: $color-white;
+        @include sm {
+          font-size: 1em;
+        }
+      }
+      .filter {
+        display: flex;
+        align-items: center;
+        .filItem {
+          padding: 0.3em 0.8em;
+          background-color: #484848;
+          cursor: pointer;
+          color: $color-white;
+          margin-left: 1em;
+          border-radius: 2px;
+          &.active {
+            background-color: #888;
+          }
+        }
+      }
+    }
+    .rt {
+      display: flex;
+      align-items: center;
+      @include sm {
+        margin-top: 1em;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .searchVid {
+        input {
+          border: 0;
+          background-color: #525252;
+          color: $color-white;
+          font-size: 0.8em;
+          padding: 0.4em 0.8em;
+          border-radius: 4px;
+          &:focus {
+            outline: 0;
+          }
+          &::placeholder {
+            color: $color-white;
+          }
+        }
+      }
+      .upload {
+        a {
+          margin-left: 1em;
+          padding: 0.4em 0.8em;
+          font-size: 0.8em;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .videosLists {
+    .vidItem {
+      border-bottom: 1px solid #999999;
+      padding: 1em 0;
+      transition: 0.3s;
+      &:hover {
+        background-color: #292929;
+      }
+      .vImg {
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          @include sm {
+            height: auto;
+          }
+        }
+      }
+      .vDesc {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include md {
+          width: 100%;
+        }
+        .main {
+          color: $color-white;
+          .vTitle {
+            font-weight: $font-bold;
+            font-size: 1.8em;
+            @include sm {
+              font-size: 1.2em;
+            }
+            i {
+              &.success {
+                color: #34a853;
+              }
+              &.pend {
+                color: #a1a1a1;
+              }
+            }
+          }
+          p {
+            font-size: 1em;
+            @include sm {
+              font-size: 0.8em;
+            }
+          }
+        }
+        .meta {
+          color: #c4c4c4;
+          @include sm {
+            font-size: 0.8em;
+          }
+          span {
+            display: inline-block;
+          }
+          .dur {
+            position: relative;
+            padding-right: 1em;
+            &:after {
+              position: absolute;
+              content: "";
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #c4c4c4;
+              top: calc(50% - 4px);
+              left: calc(100% - 0.5em);
+            }
+          }
+        }
+      }
+      .actions {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include sm {
+          margin-top: 0.5em;
+        }
+        .butcons {
+          display: flex;
+          a.act {
+            display: inline-block;
+            padding: 0.4em;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            i {
+              font-size: 1.1em;
+              color: $color-white;
+            }
+            &.delete {
+              background-color: #f33e00;
+              margin-left: 0.5em;
+            }
+            &.edit {
+              background-color: #34a853;
+            }
+          }
+        }
+      }
+    }
+  }
+}

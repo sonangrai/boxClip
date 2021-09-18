@@ -170,6 +170,24 @@
 .uploadingStat {
   margin-left: 2em;
   min-width: 600px;
+  @include xl {
+    min-width: 400px;
+  }
+  @include lg {
+    min-width: 300px;
+  }
+  @include md {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #141414;
+    padding: 6px;
+    z-index: 1;
+    border-radius: 4px;
+  }
+  @include sm {
+    width: 60%;
+  }
   .upper {
     display: flex;
     align-items: center;
