@@ -167,6 +167,17 @@
   }
 }
 
+.top.header {
+  background-color: #222;
+  padding: 1em;
+  margin: 0;
+  .logo {
+    img {
+      width: 120px;
+    }
+  }
+}
+
 .uploadingStat {
   margin-left: 2em;
   min-width: 600px;
