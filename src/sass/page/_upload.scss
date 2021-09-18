@@ -300,6 +300,30 @@
   }
 }
 
+.share {
+  margin-top: 2em;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    li {
+      .shareBtn {
+        color: $primary-color;
+        border: 0;
+        background: transparent;
+        i {
+          font-size: 1.1em;
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
 //Tagify
 .form-control.customLook {
   --tag-bg: #333;

@@ -162,3 +162,12 @@
     }
   }
 }
+
+.darkMe-toast {
+  .toast {
+    background-color: $back-black;
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+    color: $color-white;
+  }
+}

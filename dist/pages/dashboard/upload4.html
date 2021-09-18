@@ -415,6 +415,74 @@ Publish - Boxclip </title>
               <strong>Your video is ready to be Published </strong>
               <a href="./upload4" class="pBtn">Publish </a>
             </div>
+
+            <div class="share">
+              <input
+                type="text"
+                value="https://sonahangrai.com"
+                id="copyLinkA"
+                style="display: none"
+              />
+              <ul>
+                <li>
+                  <button
+                    class="copyLink shareBtn"
+                    data-url="https://sonahangrai.com"
+                    onclick="Copy()"
+                    id="liveToastBtn"
+                  >
+                    <i class="bi bi-link-45deg"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="button shareBtn"
+                    data-sharer="facebook"
+                    data-hashtag=""
+                    data-url="https://sonahangrai.com"
+                  >
+                    <i class="bi bi-facebook"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="button shareBtn"
+                    data-sharer="twitter"
+                    data-title=""
+                    data-hashtags=""
+                    data-url="https://sonahangrai.com"
+                  >
+                    <i class="bi bi-twitter"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="button shareBtn"
+                    data-sharer="linkedin"
+                    data-url="https://sonahangrai.com"
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="position-fixed bottom-0 end-0 p-3 darkMe-toast"
+              style="z-index: 11"
+            >
+              <div
+                id="liveToast"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="toast-body">
+                  <strong> Link Copied</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -422,6 +490,7 @@ Publish - Boxclip </title>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 <script>
   let schedule = document.querySelectorAll("input[name=publish]");
   schedule.forEach((s) => {
@@ -433,6 +502,22 @@ Publish - Boxclip </title>
       }
     });
   });
+
+  //COpy link
+  function Copy() {
+    var Url = document.getElementById("copyLinkA");
+    Url.select();
+    navigator.clipboard.writeText(Url.value);
+  }
+  var toastTrigger = document.getElementById("liveToastBtn");
+  var toastLiveExample = document.getElementById("liveToast");
+  if (toastTrigger) {
+    toastTrigger.addEventListener("click", function () {
+      var toast = new bootstrap.Toast(toastLiveExample);
+
+      toast.show();
+    });
+  }
 </script>
 
 </main>
