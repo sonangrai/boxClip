@@ -1,6 +1,15 @@
 {% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Upload Meta -
 Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 %}
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.7.2/tagify.min.css"
+  integrity="sha512-PORIIhNf+D+ZYNDS1gC01CA7YEGkzNzPZu4Ja0m7ljo4SHJ2+xwRL04ysc0qCVh/brYgAbGjIHtqdwKzvDfQ3g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 <div class="uploadPage">
   {% include "./components/_header.twig" %}
 
@@ -54,12 +63,111 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
           </div>
         </div>
 
-        <div class="col-xl-6">{% include "./components/_loading.twig" %}</div>
+        <div class="col-xl-6">
+          {% include "./components/_loading.twig" %}
+
+          <div class="metaForm">
+            <form action="">
+              <div class="formItem">
+                <label for="titleVideo" class="form-label"
+                  >Title of the Video</label
+                >
+                <input type="text" class="form-control" id="titleVideo" />
+              </div>
+              <div class="formItem">
+                <label for="descriptionVideo" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  style="min-height: 130px"
+                  id="descriptionVideo"
+                ></textarea>
+              </div>
+              <div class="formItem">
+                <label for="tagsVideo" class="form-label">Tags</label>
+                <input
+                  name="tagsInp"
+                  class="form-control customLook"
+                  id="tagsVideo"
+                  data-role="tagsinput"
+                  value="funny, comedy, shotoniphone, autofocus"
+                />
+              </div>
+
+              <div class="formItem">
+                <label for="searchGroup" class="form-label">Groups</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-search"></i
+                  ></span>
+                  <input
+                    class="form-control"
+                    id="searchGroup"
+                    data-role="tagsinput"
+                    placeholder="Search for Groups here..."
+                  />
+                </div>
+                <div class="selectedRow">
+                  <div class="grp">
+                    <i class="bi bi-x"></i>
+                    <span>Classics</span>
+                  </div>
+                  <div class="grp">
+                    <i class="bi bi-x"></i>
+                    <span>Documentry</span>
+                  </div>
+                  <div class="grp">
+                    <i class="bi bi-x"></i>
+                    <span>Suspense</span>
+                  </div>
+                  <div class="grp">
+                    <i class="bi bi-x"></i>
+                    <span>Animie</span>
+                  </div>
+                  <div class="grp">
+                    <i class="bi bi-x"></i>
+                    <span>Drama</span>
+                  </div>
+                </div>
+                <div class="foundGroups">
+                  <div class="grpF">
+                    <span>Action</span>
+                  </div>
+                  <div class="grpF">
+                    <span>Comedies</span>
+                  </div>
+                  <div class="grpF">
+                    <span>Crime</span>
+                  </div>
+                  <div class="grpF">
+                    <span>Critic’s Picks</span>
+                  </div>
+                  <div class="grpF">
+                    <span>Horror</span>
+                  </div>
+                  <div class="grpF">
+                    <span>Independent</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="surf">
+              <a href="./upload3" class="pBtn">Next</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.7.2/tagify.min.js"
+  integrity="sha512-pQeN/hGcBNqB8dKCxsAP4BYwM6jWIY0PS/I3vDaUFsp5pMwXilrh2r2Z/PF5lWRp7awn43hkB8PDGZF9dGA8tg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 <script>
   (function () {
     let mainThumb = document.querySelector("#choosenThumb");
@@ -106,6 +214,13 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
       t.addEventListener("click", () => {
         mainThumb.src = t.src;
       });
+    });
+
+    //Tags input
+    let tagInput = document.querySelector("input[name=tagsInp]");
+    let tagify = new Tagify(tagInput, {
+      whitelist: ["show", "tutorial", "meme", "funny"],
+      blacklist: ["fuck", "shit", "dick"],
     });
   })();
 </script>
