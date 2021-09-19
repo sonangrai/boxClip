@@ -58,3 +58,23 @@ It is configured with the following.
 - gulp-sass-glob
 - gulp-sourcemaps
 - gulp-uglify (Minify JS)
+
+## Pages Lists
+
+| Page              | Link                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| The Readme        | [Here](https://sonangrai.github.io/boxClip/)                             |
+| Index             | [Here](https://sonangrai.github.io/boxClip/dist)                         |
+| Login             | [Here](https://sonangrai.github.io/boxClip/dist/pages/auth/login)        |
+| Type              | [Here](https://sonangrai.github.io/boxClip/dist/pages/auth/type)         |
+| Packages          | [Here](https://sonangrai.github.io/boxClip/dist/pages/auth/package)      |
+| SignUp            | [Here](https://sonangrai.github.io/boxClip/dist/pages/auth/signup)       |
+| Video Listings    | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/)            |
+| Front Player      | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/player)      |
+| Dashboard Home    | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/)        |
+| Dashboard Listing | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/videos)  |
+| Dashboard Player  | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/player)  |
+| Upload Step 1     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload1) |
+| Upload Step 2     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload2) |
+| Upload Step 3     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload3) |
+| Upload Step 4     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload4) |
