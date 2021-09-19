@@ -185,6 +185,9 @@
     margin-top: 1em;
     .img {
       height: 110px;
+      @include xl {
+        height: 90px;
+      }
       img {
         width: 100%;
         height: 100%;

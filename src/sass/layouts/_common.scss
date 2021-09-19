@@ -198,6 +198,9 @@
   .logo {
     img {
       width: 120px;
+      @include sm {
+        width: 60px;
+      }
     }
   }
 }

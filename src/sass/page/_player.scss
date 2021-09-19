@@ -46,6 +46,12 @@
   }
   .marginLf {
     padding-left: 5em;
+    @include xl {
+      padding-left: 2em;
+    }
+    @include lg {
+      padding-left: 0;
+    }
   }
   .author {
     text-decoration: none;
