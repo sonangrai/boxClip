@@ -2,18 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title> Type - Boxclip
-</title>
+    <title> Type - Boxclip </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="shortcut icon"
-      href="../../img/common/fav.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <link rel="shortcut icon" href="./img/common/fav.png" type="image/x-icon" />
     <meta name="theme-color" content="#fff" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -26,6 +17,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
 
     <!-- CSS only -->
@@ -44,108 +39,7 @@
      
   </head>
   <body>
-    <div class="header top">
-  <div class="container">
-    <div class="headRow">
-      <div class="headLogo">
-        <a href="./" class="logo"
-          ><img src="../../img/common/logo.png" alt=""
-        /></a>
-      </div>
-      <div class="searchPrt">
-        <!-- Search widget -->
-<div class="searchBox">
-  <span class="searchOpen">
-    <svg
-      width="11"
-      height="11"
-      viewBox="0 0 11 11"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7.86164 6.91824H7.36478L7.18868 6.74843C7.80503 6.03145 8.1761 5.10063 8.1761 4.08805C8.1761 1.83019 6.34591 0 4.08805 0C1.83019 0 0 1.83019 0 4.08805C0 6.34591 1.83019 8.1761 4.08805 8.1761C5.10063 8.1761 6.03145 7.80503 6.74843 7.18868L6.91824 7.36478V7.86164L10.0629 11L11 10.0629L7.86164 6.91824ZM4.08805 6.91824C2.52201 6.91824 1.25786 5.65409 1.25786 4.08805C1.25786 2.52201 2.52201 1.25786 4.08805 1.25786C5.65409 1.25786 6.91824 2.52201 6.91824 4.08805C6.91824 5.65409 5.65409 6.91824 4.08805 6.91824Z"
-        fill="white"
-      />
-    </svg>
-  </span>
-  <form action="" class="srchForm">
-    <input type="text" placeholder="Search Here..." />
-    <button type="submit">
-      <svg
-        width="11"
-        height="11"
-        viewBox="0 0 11 11"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7.86164 6.91824H7.36478L7.18868 6.74843C7.80503 6.03145 8.1761 5.10063 8.1761 4.08805C8.1761 1.83019 6.34591 0 4.08805 0C1.83019 0 0 1.83019 0 4.08805C0 6.34591 1.83019 8.1761 4.08805 8.1761C5.10063 8.1761 6.03145 7.80503 6.74843 7.18868L6.91824 7.36478V7.86164L10.0629 11L11 10.0629L7.86164 6.91824ZM4.08805 6.91824C2.52201 6.91824 1.25786 5.65409 1.25786 4.08805C1.25786 2.52201 2.52201 1.25786 4.08805 1.25786C5.65409 1.25786 6.91824 2.52201 6.91824 4.08805C6.91824 5.65409 5.65409 6.91824 4.08805 6.91824Z"
-          fill="white"
-        />
-      </svg>
-    </button>
-  </form>
-</div>
-
-<script>
-  "use strict";
-
-  (function () {
-    /**
-     * For search anim
-     */
-    let searchBtn = document.querySelector(".searchOpen");
-    searchBtn.addEventListener("click", () => {
-      searchBtn.parentElement.classList.add("show");
-    });
-
-    document.addEventListener("click", function (event) {
-      var isClickInside = searchBtn.contains(event.target);
-      var isClickInside2 = document
-        .querySelector(".srchForm")
-        .contains(event.target);
-
-      if (!isClickInside && !isClickInside2) {
-        //the click was outside the specifiedElement, do something
-        searchBtn.parentElement.classList.remove("show");
-      }
-    });
-  })();
-</script>
-
-        <div class="upload">
-          <a href="./upload1">
-            <svg
-              width="24"
-              height="21"
-              viewBox="0 0 24 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21.8242 0H1.98402C0.887847 0 0 0.896002 0 2V16C0 17.104 0.887847 18 1.98402 18H13.4774C13.4258 17.674 13.3921 17.341 13.3921 17C13.3921 13.41 16.2789 10.5 19.8402 10.5C21.3381 10.5 22.713 11.019 23.8082 11.884V2C23.8082 0.896002 22.9194 0 21.8242 0ZM9.92008 13V5.00001L15.8721 9.00002L9.92008 13Z"
-                fill="white"
-              />
-              <path
-                d="M15.8711 18H18.8471V21H20.8311V18H23.8072L19.8391 13L15.8711 18Z"
-                fill="white"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="fav">
-          <a href="#!" class="userDP">BK</a>
-          <!-- If image of user is there -->
-          <!-- <a href="#!" class="userDP">
-              <img src="" alt="">
-            </a> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- 
+    
 
 <div class="typePage">
   <div class="topLogo">
