@@ -2,6 +2,11 @@
   padding: 2em;
   background-color: $back-black;
   min-height: 100vh;
+  &.hideInnerHead {
+    .header {
+      display: none;
+    }
+  }
 }
 
 .dashTiles {
