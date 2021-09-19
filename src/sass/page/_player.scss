@@ -1,4 +1,47 @@
 .playerPg {
   padding: 3em 0;
   background-color: $back-black;
+  .videoInfo {
+    .topBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1em 0;
+      .time {
+        color: #8d8d8d;
+        font-size: 0.9em;
+      }
+      .views {
+        font-size: 0.9em;
+        font-weight: $font-bold;
+        color: #bbb;
+      }
+    }
+    .vidName {
+      strong {
+        font-size: 2em;
+        color: $color-white;
+        font-weight: $font-regular;
+      }
+    }
+    .vidDesc {
+      p {
+        font-size: 0.9em;
+        color: $color-white;
+        white-space: pre-line;
+      }
+    }
+    .vidTags {
+      .vrow {
+        display: flex;
+        flex-wrap: wrap;
+        .vTag {
+          margin-right: 1em;
+          font-size: 0.9em;
+          color: #bbb;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
