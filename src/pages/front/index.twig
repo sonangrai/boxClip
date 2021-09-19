@@ -1,6 +1,13 @@
 {% extends '../../layout/_layoutInner.twig' %} {% block title %} Dashboard -
 Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 
 <div
   class="userBanner"
@@ -55,5 +62,110 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
     </div>
   </div>
 </div>
+
+<div class="vRecommended">
+  <div class="container">
+    <div class="sliderTag">
+      <div class="owl-carousel owl-theme owl-tag">
+        <div class="item">
+          <div class="theTag"><a href="#!">Music</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Trailers</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Yoga</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Document</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Anime</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">News</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Vlogs</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Photography</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Meme</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Comedy</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Bass</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Rock</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Recently Uploaded</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Live</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">High liked</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Region Popular</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Most Followed</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Older</a></div>
+        </div>
+        <div class="item">
+          <div class="theTag"><a href="#!">Rythm</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+  $(".owl-tag").owlCarousel({
+    stagePadding: 50,
+    loop: false,
+    margin: 10,
+    nav: true,
+    dots: false,
+    autoWidth: true,
+    navText: [
+      `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 14L12 -1.76425e-06L14 -1.7404e-06L14 14L12 14ZM8.34742e-08 7L10 13.67L10 0.329998L8.34742e-08 7Z" fill="white"/>
+        </svg>
+        `,
+      `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 -5.24537e-07L2 14L3.41715e-07 14L9.53674e-07 -6.11959e-07L2 -5.24537e-07ZM14 7L4 0.33L4 13.67L14 7Z" fill="white"/>
+            </svg>
+            `,
+    ],
+    responsive: {
+      0: {
+        items: 5,
+      },
+      600: {
+        items: 6,
+      },
+      1000: {
+        items: 9,
+      },
+    },
+  });
+</script>
 
 {% endblock %}
