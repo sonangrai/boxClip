@@ -104,7 +104,8 @@
       left: 0;
       background-color: #222 !important;
       &.disabled {
-        display: none;
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
     .owl-next {
@@ -114,7 +115,8 @@
       right: 0;
       background-color: #222 !important;
       &.disabled {
-        display: none;
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
   }
