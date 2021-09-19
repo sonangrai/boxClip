@@ -1,0 +1,67 @@
+{% extends '../../layout/_layoutInner.twig' %} {% block title %} Dashboard -
+Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
+%}
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+
+<div class="playerPg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="playing">
+          <video
+            id="playerDiv"
+            class="thePlayer"
+            controls
+            preload="auto"
+            width="100%"
+            height="auto"
+            poster="MY_VIDEO_POSTER.jpg"
+            data-setup="{}"
+          >
+            <source
+              src="https://res.cloudinary.com/drqgginx9/video/upload/v1632043205/boxClip/Lemon_-_82602_ppwh1g.mp4"
+              type="video/mp4"
+            />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider
+              upgrading to a web browser that
+            </p>
+          </video>
+        </div>
+        <div class="videoInfo">
+          <div class="topBar">
+            <div class="time">December 20 , 2020</div>
+            <div class="views">20,000 Views</div>
+          </div>
+          <div class="vidName">
+            <strong>Escalante</strong>
+          </div>
+          <div class="vidDesc">
+            <p>
+              On Mother's Day weekend we took the family down to Escalante,
+              Utah. We enjoyed our time in Goblin Valley and Lower Calf Falls.
+              April 2020
+            </p>
+          </div>
+          <div class="vidTags">
+            <div class="vrow">
+              <a href="#!" class="vTag">#hiking</a>
+              <a href="#!" class="vTag">#woods</a>
+              <a href="#!" class="vTag">#dishes</a>
+              <a href="#!" class="vTag">#food</a>
+              <a href="#!" class="vTag">#scenes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+<script>
+  const player = new Plyr("#playerDiv");
+</script>
+
+{% endblock %}
