@@ -171,33 +171,37 @@
     font-weight: $font-sbold;
     color: $color-white;
   }
-  .videoRow {
-    .vidItem {
-      display: block;
-      border-radius: 8px;
-      border: 1px solid #717171;
-      overflow: hidden;
-      margin-top: 1em;
-      .img {
+}
+
+//Video Rows
+
+.videoRow {
+  .vidItem {
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #717171;
+    overflow: hidden;
+    margin-top: 1em;
+    .img {
+      height: 110px;
+      img {
+        width: 100%;
         height: 100%;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        object-fit: cover;
       }
     }
-    .vidInfo {
-      padding: 0.5em 0.5em 0 0;
-      .vidTitle {
-        font-size: 0.9em;
-        font-weight: $font-bold;
-        color: $color-white;
-      }
-      .vidDate {
-        font-size: 0.8em;
-        color: #8a8484;
-      }
+  }
+  .vidInfo {
+    padding: 1em 1em 0 0;
+    .vidTitle {
+      font-size: 0.9em;
+      font-weight: $font-bold;
+      color: $color-white;
+    }
+    .vidDate {
+      font-size: 0.8em;
+      color: #8a8484;
     }
   }
 }

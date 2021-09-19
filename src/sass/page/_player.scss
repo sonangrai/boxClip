@@ -44,4 +44,35 @@
       }
     }
   }
+  .marginLf {
+    padding-left: 5em;
+  }
+  .author {
+    text-decoration: none;
+    color: $color-white;
+    display: block;
+    .auth {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .authInfo {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      .name {
+        font-weight: $font-bold;
+      }
+      .type {
+        font-size: 0.8em;
+      }
+    }
+  }
 }
