@@ -61,4 +61,30 @@
       }
     }
   }
+  .allComments {
+    margin: 2em 0;
+    .cmItem {
+      margin-bottom: 2em;
+      .commenter {
+        .name {
+          text-decoration: none;
+          font-weight: $font-bold;
+          color: $color-white;
+          font-size: 1.1em;
+          margin-right: 0.3em;
+        }
+        .time {
+          font-size: 0.9em;
+          color: #bbb;
+        }
+      }
+      .theCmt {
+        p {
+          font-weight: $font-light;
+          white-space: pre-line;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }
