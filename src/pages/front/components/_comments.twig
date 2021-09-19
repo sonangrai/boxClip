@@ -1,0 +1,36 @@
+<div class="commentsPrt">
+  <div class="head">Comments</div>
+  <div class="addComment">
+    <form action="" class="cmtForm">
+      <div class="avat">
+        <img src="../../img/front/avat.png" alt="" />
+      </div>
+      <div class="inputter">
+        <textarea
+          name="comment"
+          id="cmtText"
+          rows="1"
+          placeholder="Your Comment Here..."
+        ></textarea>
+        <div class="actionBtns">
+          <input class="cancel" type="reset" id="cancelCmt" value="Cancel" />
+          <input class="pBtn" id="addCmt" type="button" value="Save" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  let theCmt = document.querySelector("#cmtText");
+  theCmt.addEventListener("focus", () => {
+    document.querySelector(".actionBtns").classList.add("shoMe");
+  });
+  document.querySelector("#cancelCmt").addEventListener("click", () => {
+    document.querySelector(".actionBtns").classList.remove("shoMe");
+  });
+  theCmt.addEventListener("blur", () => {
+    document.querySelector(".actionBtns").classList.remove("shoMe");
+    if (theCmt.value !== "") theCmt.style.borderBottom = "2px solid #e5e5e5";
+  });
+</script>

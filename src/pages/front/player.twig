@@ -1,4 +1,4 @@
-{% extends '../../layout/_layoutInner.twig' %} {% block title %} Dashboard -
+{% extends '../../layout/_layoutInner.twig' %} {% block title %} Video Player -
 Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 %}
 
@@ -53,6 +53,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
             </div>
           </div>
         </div>
+        {% include "./components/_comments.twig" %}
       </div>
       <div class="col-xl-4">
         <div class="marginLf">

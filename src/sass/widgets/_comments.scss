@@ -1,0 +1,64 @@
+.commentsPrt {
+  margin: 2em 0;
+  .head {
+    color: $color-white;
+    margin-bottom: 1em;
+  }
+  .addComment {
+    .cmtForm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .avat {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .inputter {
+        flex-grow: 2;
+        margin-left: 1em;
+        textarea {
+          transition: 0.3s;
+          width: 100%;
+          border: 0;
+          background-color: transparent;
+          resize: none;
+          color: $color-white;
+          &:focus {
+            border-bottom: 2px solid #e5e5e5;
+            outline: none;
+            min-height: 100px;
+          }
+        }
+        .actionBtns {
+          display: none;
+          justify-content: flex-end;
+          align-items: center;
+          input {
+            font-size: 0.9em;
+            color: $color-white;
+          }
+          .cancel {
+            background-color: transparent;
+            border: 0;
+          }
+          .pBtn {
+            padding: 0.4em 0.8em;
+            margin-left: 0.5em;
+            border-radius: 2px;
+            font-weight: $font-regular;
+          }
+          &.shoMe {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
