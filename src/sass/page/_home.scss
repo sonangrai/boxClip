@@ -21,6 +21,12 @@
     background-color: #2b2b2bdb;
     padding: 2em;
     color: $color-white;
+    @include xl {
+      width: 40%;
+    }
+    @include md {
+      width: 100%;
+    }
     .avat {
       width: 130px;
       height: 130px;
@@ -95,6 +101,9 @@
   .owl-stage-outer {
     width: 95%;
     margin: auto;
+    @include md {
+      width: 90%;
+    }
   }
   .owl-nav {
     .owl-prev {
@@ -168,6 +177,9 @@
   .grpC {
     display: block;
     text-decoration: none;
+    @include lg {
+      margin-bottom: 2em;
+    }
     .fig {
       height: 190px;
       border-radius: 6px;
