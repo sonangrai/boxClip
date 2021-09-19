@@ -10,3 +10,66 @@
     color: $color-white;
   }
 }
+
+//Front home
+.userBanner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3em 0;
+  .userCard {
+    width: 30%;
+    background-color: #2b2b2bdb;
+    padding: 2em;
+    color: $color-white;
+    .avat {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .userName {
+      font-size: 1.8em;
+      font-weight: $font-ebold;
+    }
+    .userDesig,
+    .userAddress {
+      font-size: 1.1em;
+    }
+    .userUrl {
+      a {
+        color: #53a2ff;
+        text-decoration: underline;
+      }
+    }
+    table {
+      width: 70%;
+      margin: 1em 0;
+    }
+    .userSocial {
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        li {
+          margin-right: 0.5em;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #70c3ff;
+            color: $back-black;
+            height: 22px;
+            width: 22px;
+            border-radius: 4px;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}
