@@ -150,10 +150,7 @@ Boxclip </title>
 <div class="searchPg">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="head">Search Result for : <strong>One Piece</strong></div>
-      </div>
-      <div class="col-xl-4">
+      <div class="col-xl-3">
         <div class="filterSrch">
           <div class="head">Filter</div>
           <div class="grpFilter">
@@ -162,31 +159,145 @@ Boxclip </title>
               <div class="form-check">
                 <input
                   class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  type="checkbox"
+                  name="group"
+                  id="documents"
                   checked
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Default radio
+                <label class="form-check-label" for="documents">
+                  Documentries
                 </label>
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
+                  type="checkbox"
+                  name="group"
+                  id="classics"
                 />
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Default checked radio
+                <label class="form-check-label" for="classics">
+                  Classics
                 </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="comedy"
+                />
+                <label class="form-check-label" for="comedy"> Comedy </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="covid"
+                />
+                <label class="form-check-label" for="covid"> Covid </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="romance"
+                />
+                <label class="form-check-label" for="romance"> Romance </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="drama"
+                />
+                <label class="form-check-label" for="drama"> Drama </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="ryhm"
+                />
+                <label class="form-check-label" for="ryhm"> Ryhm </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="adventure"
+                />
+                <label class="form-check-label" for="adventure">
+                  Adventure
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="wildlife"
+                />
+                <label class="form-check-label" for="wildlife">
+                  Wildlife
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="knowledge"
+                />
+                <label class="form-check-label" for="knowledge">
+                  Knowledge
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="music"
+                />
+                <label class="form-check-label" for="music"> Music </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="live"
+                />
+                <label class="form-check-label" for="live"> Live </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="group"
+                  id="sports"
+                />
+                <label class="form-check-label" for="sports"> Sports </label>
+              </div>
+              <div class="moreTog">
+                <span class="more">
+                  <i class="bi bi-arrow-down"></i> View More Groups</span
+                >
+                <span class="less">
+                  <i class="bi bi-arrow-up"></i> View Less Groups</span
+                >
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-xl-8">
+      <div class="col-xl-9">
+        <div class="head">Search Result for : <strong>One Piece</strong></div>
         <div class="sortFilt">
           <span>Sort By</span>
           <div class="filter">
@@ -257,6 +368,29 @@ Boxclip </title>
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    let togMore = document.querySelector(".moreTog");
+    let tenchecks = document.querySelectorAll(".grpFilter .form-check");
+    togMore.addEventListener("click", () => {
+      togMore.classList.toggle("expand");
+      tenchecks.forEach((a, i) => {
+        if (i > 10) {
+          a.classList.toggle("show");
+        }
+      });
+    });
+
+    window.onload = () => {
+      tenchecks.forEach((a, i) => {
+        if (i < 11) {
+          a.classList.add("show");
+        }
+      });
+    };
+  })();
+</script>
 
 
     <script

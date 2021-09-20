@@ -1,0 +1,69 @@
+.searchPg {
+  background-color: $back-black;
+  padding: 3em 0;
+
+  .filterSrch {
+    color: $color-white;
+    .head {
+      font-size: 1.4em;
+      font-weight: $font-bold;
+      margin-bottom: 0.5em;
+    }
+  }
+  .grpFilter {
+    .title {
+      font-size: 1.2em;
+      font-weight: $font-sbold;
+    }
+    .form-check {
+      margin: 0.8em 0;
+      min-height: 0;
+      height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      &.show {
+        height: auto;
+        min-height: auto;
+      }
+      .form-check-input:checked[type="checkbox"] {
+        background-color: $primary-color;
+      }
+      .form-check-input {
+        background-image: unset;
+        border-radius: 50%;
+        background-color: transparent;
+        position: relative;
+        margin-right: 1em;
+        margin-left: -1em;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 170%;
+          height: 170%;
+          bottom: calc(-35%);
+          right: calc(-35%);
+          border: 1px solid #c4c4c4;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+//More TOggler
+.moreTog {
+  &.expand {
+    span.more {
+      display: none;
+    }
+    span.less {
+      display: block;
+    }
+  }
+  span {
+    cursor: pointer;
+    &.less {
+      display: none;
+    }
+  }
+}
