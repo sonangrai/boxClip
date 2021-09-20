@@ -228,7 +228,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 
 <script>
   (function () {
-    if (window.window > 768) {
+    if (window.screen.width > 768) {
       let togMore = document.querySelector(".moreTog");
       let tenchecks = document.querySelectorAll(".grpFilter .form-check");
       togMore.addEventListener("click", () => {
