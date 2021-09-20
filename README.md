@@ -78,3 +78,4 @@ It is configured with the following.
 | Upload Step 2     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload2) |
 | Upload Step 3     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload3) |
 | Upload Step 4     | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/upload4) |
+| Search Page       | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/search)      |
