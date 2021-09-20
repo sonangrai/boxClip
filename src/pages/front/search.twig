@@ -5,7 +5,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 <div class="searchPg">
   <div class="container">
     <div class="row">
-      <div class="col-xl-3">
+      <div class="col-xl-3 col-lg-3 col-md-4">
         <div class="filterSrch">
           <div class="head">Filter</div>
           <div class="grpFilter">
@@ -151,7 +151,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
           </div>
         </div>
       </div>
-      <div class="col-xl-9">
+      <div class="col-xl-9 col-lg-9 col-md-8">
         <div class="srchHead">
           Search Result for : <strong>One Piece</strong>
         </div>
@@ -164,7 +164,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
         </div>
         <div class="videosR">
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <a class="rVid" href="#!">
                 <div class="thumb">
                   <img src="../../img/front/v1.png" alt="" />
@@ -175,7 +175,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <a class="rVid" href="#!">
                 <div class="thumb">
                   <img src="../../img/front/v2.png" alt="" />
@@ -186,7 +186,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <a class="rVid" href="#!">
                 <div class="thumb">
                   <img src="../../img/front/v3.png" alt="" />
@@ -197,7 +197,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <a class="rVid" href="#!">
                 <div class="thumb">
                   <img src="../../img/front/v4.png" alt="" />
@@ -208,7 +208,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <a class="rVid" href="#!">
                 <div class="thumb">
                   <img src="../../img/front/v5.png" alt="" />
@@ -228,24 +228,26 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 
 <script>
   (function () {
-    let togMore = document.querySelector(".moreTog");
-    let tenchecks = document.querySelectorAll(".grpFilter .form-check");
-    togMore.addEventListener("click", () => {
-      togMore.classList.toggle("expand");
-      tenchecks.forEach((a, i) => {
-        if (i > 10) {
-          a.classList.toggle("show");
-        }
+    if (window.window > 768) {
+      let togMore = document.querySelector(".moreTog");
+      let tenchecks = document.querySelectorAll(".grpFilter .form-check");
+      togMore.addEventListener("click", () => {
+        togMore.classList.toggle("expand");
+        tenchecks.forEach((a, i) => {
+          if (i > 10) {
+            a.classList.toggle("show");
+          }
+        });
       });
-    });
 
-    window.onload = () => {
-      tenchecks.forEach((a, i) => {
-        if (i < 11) {
-          a.classList.add("show");
-        }
-      });
-    };
+      window.onload = () => {
+        tenchecks.forEach((a, i) => {
+          if (i < 11) {
+            a.classList.add("show");
+          }
+        });
+      };
+    }
   })();
 </script>
 

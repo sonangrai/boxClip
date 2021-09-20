@@ -15,35 +15,46 @@
       font-size: 1.2em;
       font-weight: $font-sbold;
     }
-    .form-check {
-      margin: 0.8em 0;
-      min-height: 0;
-      height: 0;
-      overflow: hidden;
-      transition: 0.3s;
-      &.show {
-        height: auto;
-        min-height: auto;
+    form {
+      @include md {
+        display: flex;
+        flex-wrap: wrap;
       }
-      .form-check-input:checked[type="checkbox"] {
-        background-color: $primary-color;
-      }
-      .form-check-input {
-        background-image: unset;
-        border-radius: 50%;
-        background-color: transparent;
-        position: relative;
-        margin-right: 1em;
-        margin-left: -1em;
-        &:before {
-          position: absolute;
-          content: "";
-          width: 170%;
-          height: 170%;
-          bottom: calc(-35%);
-          right: calc(-35%);
-          border: 1px solid #c4c4c4;
+      .form-check {
+        margin: 0.8em 0;
+        min-height: 0;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        @include md {
+          height: auto;
+          min-height: auto;
+          margin-right: 0.5em;
+        }
+        &.show {
+          height: auto;
+          min-height: auto;
+        }
+        .form-check-input:checked[type="checkbox"] {
+          background-color: $primary-color;
+        }
+        .form-check-input {
+          background-image: unset;
           border-radius: 50%;
+          background-color: transparent;
+          position: relative;
+          margin-right: 1em;
+          margin-left: -1em;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 170%;
+            height: 170%;
+            bottom: calc(-35%);
+            right: calc(-35%);
+            border: 1px solid #c4c4c4;
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -71,6 +82,9 @@
 
 //More TOggler
 .moreTog {
+  @include md {
+    display: none;
+  }
   &.expand {
     span.more {
       display: none;
