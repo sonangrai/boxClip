@@ -5,186 +5,178 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 <div class="dashboardHome">
   {% include "./components/_header.twig" %}
 
-  <div class="clientsLists">
-    <div class="container">
-      <div class="videoListings">
-        <div class="container">
-          <div class="topper">
-            <div class="lf">
-              <span>All Clients</span>
+  <div class="videoListings clientsLists">
+    <div class="">
+      <div class="container">
+        <div class="topper">
+          <div class="lf">
+            <span>All Clients</span>
+          </div>
+          <div class="rt">
+            <div class="searchVid">
+              <input type="text" placeholder="Search..." />
             </div>
-            <div class="rt">
-              <div class="searchVid">
-                <input type="text" placeholder="Search..." />
-              </div>
-              <div class="upload">
-                <a href="./addclient" class="pBtn">
-                  <svg
-                    width="13"
-                    height="12"
-                    viewBox="0 0 13 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.1327 5.01712C9.74973 5.01712 8.36679 5.01712 6.98385 5.01712C6.98385 3.65045 6.98385 2.28378 6.98385 0.917107C6.98385 -0.305703 5.07685 -0.305703 5.07685 0.917107C5.07685 2.28378 5.07685 3.65045 5.07685 5.01712C3.69391 5.01712 2.31097 5.01712 0.928025 5.01712C-0.309342 5.01712 -0.309342 6.90168 0.928025 6.90168C2.31097 6.90168 3.69391 6.90168 5.07685 6.90168C5.07685 8.26835 5.07685 9.63502 5.07685 11.0017C5.07685 12.2245 6.98385 12.2245 6.98385 11.0017C6.98385 9.63502 6.98385 8.26835 6.98385 6.90168C8.36679 6.90168 9.74973 6.90168 11.1327 6.90168C12.3555 6.91607 12.3555 5.01712 11.1327 5.01712Z"
-                      fill="white"
-                    />
-                  </svg>
-
-                  <span>Add Client</span></a
+            <div class="upload">
+              <a href="./addclient" class="pBtn">
+                <svg
+                  width="13"
+                  height="12"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    d="M11.1327 5.01712C9.74973 5.01712 8.36679 5.01712 6.98385 5.01712C6.98385 3.65045 6.98385 2.28378 6.98385 0.917107C6.98385 -0.305703 5.07685 -0.305703 5.07685 0.917107C5.07685 2.28378 5.07685 3.65045 5.07685 5.01712C3.69391 5.01712 2.31097 5.01712 0.928025 5.01712C-0.309342 5.01712 -0.309342 6.90168 0.928025 6.90168C2.31097 6.90168 3.69391 6.90168 5.07685 6.90168C5.07685 8.26835 5.07685 9.63502 5.07685 11.0017C5.07685 12.2245 6.98385 12.2245 6.98385 11.0017C6.98385 9.63502 6.98385 8.26835 6.98385 6.90168C8.36679 6.90168 9.74973 6.90168 11.1327 6.90168C12.3555 6.91607 12.3555 5.01712 11.1327 5.01712Z"
+                    fill="white"
+                  />
+                </svg>
+
+                <span>Add Client</span></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="videosLists">
+          <div class="vidItem clientItem">
+            <div class="row">
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
+                <div class="uInfo">
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="uImg">
+                        <img src="../../img/dashboard/u1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-9">
+                      <div class="uMeta">
+                        <div class="uName">Rishav Gautam</div>
+                        <div class="uDesig">Creative Designer</div>
+                        <div class="uAddress">StoryCycle, Halmstad, Sweden</div>
+                        <div class="uMail">ri.shav@evolvetu.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                <div class="uGroups">
+                  <div class="gItem">Classics</div>
+                  <div class="gItem">Document</div>
+                  <div class="gItem">Music</div>
+                  <div class="gItem">Travel</div>
+                  <div class="gItem">Vlog</div>
+                  <div class="gItem">Food</div>
+                  <div class="gItem">Modal</div>
+                  <div class="gItem">Wildlife</div>
+                  <div class="gItem">NASA</div>
+                </div>
+              </div>
+              <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
+                <div class="userAction">
+                  <div class="butcons">
+                    <a href="" class="act edit"
+                      ><i class="bi bi-pencil-fill"></i
+                    ></a>
+                    <a href="" class="act delete"
+                      ><i class="bi bi-trash-fill"></i
+                    ></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="videosLists">
-            <div class="vidItem clientItem">
-              <div class="row">
-                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
-                  <div class="uInfo">
-                    <div class="row">
-                      <div class="col-3">
-                        <div class="uImg">
-                          <img src="../../img/dashboard/u1.png" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-9">
-                        <div class="uMeta">
-                          <div class="uName">Rishav Gautam</div>
-                          <div class="uDesig">Creative Designer</div>
-                          <div class="uAddress">
-                            StoryCycle, Halmstad, Sweden
-                          </div>
-                          <div class="uMail">ri.shav@evolvetu.com</div>
-                        </div>
+          <div class="vidItem clientItem">
+            <div class="row">
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
+                <div class="uInfo">
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="uImg">
+                        <img src="../../img/dashboard/u2.png" alt="" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
-                  <div class="uGroups">
-                    <div class="gItem">Classics</div>
-                    <div class="gItem">Document</div>
-                    <div class="gItem">Music</div>
-                    <div class="gItem">Travel</div>
-                    <div class="gItem">Vlog</div>
-                    <div class="gItem">Food</div>
-                    <div class="gItem">Modal</div>
-                    <div class="gItem">Wildlife</div>
-                    <div class="gItem">NASA</div>
-                  </div>
-                </div>
-                <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
-                  <div class="userAction">
-                    <div class="butcons">
-                      <a href="" class="act edit"
-                        ><i class="bi bi-pencil-fill"></i
-                      ></a>
-                      <a href="" class="act delete"
-                        ><i class="bi bi-trash-fill"></i
-                      ></a>
+                    <div class="col-9">
+                      <div class="uMeta">
+                        <div class="uName">Shoan Madisson</div>
+                        <div class="uDesig">UI/UX Designer</div>
+                        <div class="uAddress">StoryCycle, Halmstad, Sweden</div>
+                        <div class="uMail">ri.shav@evolvetu.com</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="vidItem clientItem">
-              <div class="row">
-                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
-                  <div class="uInfo">
-                    <div class="row">
-                      <div class="col-3">
-                        <div class="uImg">
-                          <img src="../../img/dashboard/u2.png" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-9">
-                        <div class="uMeta">
-                          <div class="uName">Shoan Madisson</div>
-                          <div class="uDesig">UI/UX Designer</div>
-                          <div class="uAddress">
-                            StoryCycle, Halmstad, Sweden
-                          </div>
-                          <div class="uMail">ri.shav@evolvetu.com</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                <div class="uGroups">
+                  <div class="gItem">Classics</div>
+                  <div class="gItem">Document</div>
+                  <div class="gItem">Music</div>
+                  <div class="gItem">Travel</div>
+                  <div class="gItem">Vlog</div>
+                  <div class="gItem">Food</div>
+                  <div class="gItem">Modal</div>
+                  <div class="gItem">Wildlife</div>
+                  <div class="gItem">NASA</div>
                 </div>
-                <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
-                  <div class="uGroups">
-                    <div class="gItem">Classics</div>
-                    <div class="gItem">Document</div>
-                    <div class="gItem">Music</div>
-                    <div class="gItem">Travel</div>
-                    <div class="gItem">Vlog</div>
-                    <div class="gItem">Food</div>
-                    <div class="gItem">Modal</div>
-                    <div class="gItem">Wildlife</div>
-                    <div class="gItem">NASA</div>
-                  </div>
-                </div>
-                <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
-                  <div class="userAction">
-                    <div class="butcons">
-                      <a href="" class="act edit"
-                        ><i class="bi bi-pencil-fill"></i
-                      ></a>
-                      <a href="" class="act delete"
-                        ><i class="bi bi-trash-fill"></i
-                      ></a>
-                    </div>
+              </div>
+              <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
+                <div class="userAction">
+                  <div class="butcons">
+                    <a href="" class="act edit"
+                      ><i class="bi bi-pencil-fill"></i
+                    ></a>
+                    <a href="" class="act delete"
+                      ><i class="bi bi-trash-fill"></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="vidItem clientItem">
-              <div class="row">
-                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
-                  <div class="uInfo">
-                    <div class="row">
-                      <div class="col-3">
-                        <div class="uImg">
-                          <img src="../../img/dashboard/u3.png" alt="" />
-                        </div>
+          </div>
+          <div class="vidItem clientItem">
+            <div class="row">
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-12">
+                <div class="uInfo">
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="uImg">
+                        <img src="../../img/dashboard/u3.png" alt="" />
                       </div>
-                      <div class="col-9">
-                        <div class="uMeta">
-                          <div class="uName">Rishav Gautam</div>
-                          <div class="uDesig">Software Engineer</div>
-                          <div class="uAddress">
-                            StoryCycle, Halmstad, Sweden
-                          </div>
-                          <div class="uMail">ri.shav@evolvetu.com</div>
-                        </div>
+                    </div>
+                    <div class="col-9">
+                      <div class="uMeta">
+                        <div class="uName">Rishav Gautam</div>
+                        <div class="uDesig">Software Engineer</div>
+                        <div class="uAddress">StoryCycle, Halmstad, Sweden</div>
+                        <div class="uMail">ri.shav@evolvetu.com</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
-                  <div class="uGroups">
-                    <div class="gItem">Classics</div>
-                    <div class="gItem">Document</div>
-                    <div class="gItem">Music</div>
-                    <div class="gItem">Travel</div>
-                    <div class="gItem">Vlog</div>
-                    <div class="gItem">Food</div>
-                    <div class="gItem">Modal</div>
-                    <div class="gItem">Wildlife</div>
-                    <div class="gItem">NASA</div>
-                  </div>
+              </div>
+              <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                <div class="uGroups">
+                  <div class="gItem">Classics</div>
+                  <div class="gItem">Document</div>
+                  <div class="gItem">Music</div>
+                  <div class="gItem">Travel</div>
+                  <div class="gItem">Vlog</div>
+                  <div class="gItem">Food</div>
+                  <div class="gItem">Modal</div>
+                  <div class="gItem">Wildlife</div>
+                  <div class="gItem">NASA</div>
                 </div>
-                <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
-                  <div class="userAction">
-                    <div class="butcons">
-                      <a href="" class="act edit"
-                        ><i class="bi bi-pencil-fill"></i
-                      ></a>
-                      <a href="" class="act delete"
-                        ><i class="bi bi-trash-fill"></i
-                      ></a>
-                    </div>
+              </div>
+              <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12">
+                <div class="userAction">
+                  <div class="butcons">
+                    <a href="" class="act edit"
+                      ><i class="bi bi-pencil-fill"></i
+                    ></a>
+                    <a href="" class="act delete"
+                      ><i class="bi bi-trash-fill"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -194,6 +186,6 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
       </div>
     </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
+</div>
