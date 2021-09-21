@@ -280,6 +280,9 @@
     @include lg {
       width: 100%;
     }
+    @include sm {
+      margin-top: 1em;
+    }
     color: $color-white;
     .gTitle {
       font-size: 1.4em;
