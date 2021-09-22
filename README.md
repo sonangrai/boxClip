@@ -83,3 +83,4 @@ It is configured with the following.
 | Group Lists           | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/group)     |
 | Add Group (Dashboard) | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/addgroup)  |
 | Create Client (Front) | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/createClients) |
+| Assign Group (Front)  | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/assignGroup)   |

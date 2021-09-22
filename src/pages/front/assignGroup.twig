@@ -1,0 +1,112 @@
+{% extends '../../layout/_layout.twig' %} {% block title %} Assign Group -
+Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
+%}
+
+<div class="signPage assignPage">
+  <div class="logPho">
+    <img src="../../img/login/signIllus.png" alt="" />
+  </div>
+  <div class="loginCard">
+    <div class="topLogo">
+      <img src="../../img/common/logo.png" alt="boxClip" />
+    </div>
+    <div class="logForm">
+      <form action="" class="assignForm">
+        <div class="formItem profilePhoto">
+          <img id="pPrev" />
+          <label for="pPic" class="pBtn">Choose Picture</label>
+          <input type="file" accept="image/*" id="pPic" class="proPhoto" />
+        </div>
+
+        <div class="formItem">
+          <label for="searchGroup" class="form-label">Groups</label>
+          <small class="subT">Assign groups you want to be invovled with</small>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"
+              ><i class="bi bi-search"></i
+            ></span>
+            <input
+              class="form-control"
+              id="searchGroup"
+              data-role="tagsinput"
+              placeholder="Search for Groups here..."
+            />
+          </div>
+          <div class="selectedRow">
+            <div class="grp">
+              <i class="bi bi-x"></i>
+              <span>Classics</span>
+            </div>
+            <div class="grp">
+              <i class="bi bi-x"></i>
+              <span>Documentry</span>
+            </div>
+            <div class="grp">
+              <i class="bi bi-x"></i>
+              <span>Suspense</span>
+            </div>
+            <div class="grp">
+              <i class="bi bi-x"></i>
+              <span>Animie</span>
+            </div>
+            <div class="grp">
+              <i class="bi bi-x"></i>
+              <span>Drama</span>
+            </div>
+          </div>
+          <div class="foundGroups">
+            <div class="grpF">
+              <span>Action</span>
+            </div>
+            <div class="grpF">
+              <span>Comedies</span>
+            </div>
+            <div class="grpF">
+              <span>Crime</span>
+            </div>
+            <div class="grpF">
+              <span>Critic’s Picks</span>
+            </div>
+            <div class="grpF">
+              <span>Horror</span>
+            </div>
+            <div class="grpF">
+              <span>Independent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="formItem">
+          <input type="submit" class="pBtn" value="Done" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    //THe delete btn
+    let pDbtn = document.createElement("button");
+    pDbtn.className = "pDbtn";
+    pDbtn.innerHTML = "Delete";
+
+    pDbtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      pPrev.classList.remove("choosed");
+      pPrev.src = "";
+    });
+
+    let pPhoto = document.querySelector(".proPhoto");
+    pPhoto.addEventListener("change", (e) => {
+      const [file] = e.target.files;
+      if (file) {
+        pPrev.src = URL.createObjectURL(file);
+        pPrev.classList.add("choosed");
+        document.querySelector(".profilePhoto").appendChild(pDbtn);
+      }
+    });
+  })();
+</script>
+
+{% endblock %}

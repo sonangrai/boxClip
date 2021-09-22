@@ -191,37 +191,6 @@
           border-right: 0;
         }
       }
-      .selectedRow {
-        display: flex;
-        margin-top: 1em;
-        flex-wrap: wrap;
-        .grp {
-          margin-right: 0.5em;
-          margin-bottom: 0.5em;
-          color: $color-white;
-          background-color: $primary-color;
-          padding: 0.2em 0.4em;
-          border-radius: 3px;
-          cursor: pointer;
-          font-size: 0.9em;
-          display: flex;
-          align-items: center;
-          i {
-            margin-right: 0.2em;
-          }
-        }
-      }
-      .foundGroups {
-        margin-top: 1em;
-        display: flex;
-        flex-wrap: wrap;
-        .grpF {
-          font-size: 0.9em;
-          color: $color-white;
-          cursor: pointer;
-          margin: 0 0.5em;
-        }
-      }
     }
     .surf {
       margin-top: 2em;
@@ -231,6 +200,38 @@
         padding: 0.2em 1em;
       }
     }
+  }
+}
+
+.selectedRow {
+  display: flex;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  .grp {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    color: $color-white;
+    background-color: $primary-color;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 0.2em;
+    }
+  }
+}
+.foundGroups {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  .grpF {
+    font-size: 0.9em;
+    color: $color-white;
+    cursor: pointer;
+    margin: 0 0.5em;
   }
 }
 
