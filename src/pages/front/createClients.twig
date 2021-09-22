@@ -1,0 +1,118 @@
+{% extends '../../layout/_layout.twig' %} {% block title %} Signup - Boxclip {%
+endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+
+<div class="signPage">
+  <div class="logPho">
+    <img src="../../img/login/signIllus.png" alt="" />
+  </div>
+  <div class="loginCard">
+    <div class="topLogo">
+      <img src="../../img/common/logo.png" alt="boxClip" />
+    </div>
+    <div class="logForm">
+      <div class="label">
+        <span>Register</span>
+        <small>Register as a Client and interact with your customers</small>
+      </div>
+
+      <div class="oauth">
+        <div class="butcons">
+          <a href="#!">
+            <img src="../../img/login/ggl.png" alt="" />
+            <span>Sign Up with Google</span>
+          </a>
+        </div>
+        <div class="butcons">
+          <a href="#!">
+            <img src="../../img/login/fb.png" alt="" />
+            <span>Sign Up with Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <form action="/pages/dashboard">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" />
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="country" class="form-label">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="organization" class="form-label">Organization</label>
+              <input type="text" class="form-control" id="organization" />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="formItem">
+              <label for="confirmPassword" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="formItem form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <div class="fFlex">
+            <label class="form-check-label" for="exampleCheck1"
+              >I Agree to the Boxklip Application's
+              <a href="">Privacy Policy</a> and
+              <a href="">Terms And Conditions.</a></label
+            >
+          </div>
+        </div>
+        <button type="submit" class="btn pBtn">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
