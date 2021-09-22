@@ -358,202 +358,59 @@ Boxclip </title>
 </script>
 
 
-  <div class="videoListings groupsLists">
+  <div class="create">
     <div class="container">
-      <div class="topper">
-        <div class="lf">
-          <span>All Clients</span>
+      <div class="creHead">Create New Group</div>
+      <form action="">
+        <div class="formItem">
+          <label for="groupName" class="form-label">Group Name</label>
+          <input type="text" class="form-control" id="groupName" />
         </div>
-        <div class="rt">
-          <div class="searchVid">
-            <input type="text" placeholder="Search..." />
-          </div>
-          <div class="upload">
-            <a href="./addgroup" class="pBtn">
-              <svg
-                width="13"
-                height="12"
-                viewBox="0 0 13 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.1327 5.01712C9.74973 5.01712 8.36679 5.01712 6.98385 5.01712C6.98385 3.65045 6.98385 2.28378 6.98385 0.917107C6.98385 -0.305703 5.07685 -0.305703 5.07685 0.917107C5.07685 2.28378 5.07685 3.65045 5.07685 5.01712C3.69391 5.01712 2.31097 5.01712 0.928025 5.01712C-0.309342 5.01712 -0.309342 6.90168 0.928025 6.90168C2.31097 6.90168 3.69391 6.90168 5.07685 6.90168C5.07685 8.26835 5.07685 9.63502 5.07685 11.0017C5.07685 12.2245 6.98385 12.2245 6.98385 11.0017C6.98385 9.63502 6.98385 8.26835 6.98385 6.90168C8.36679 6.90168 9.74973 6.90168 11.1327 6.90168C12.3555 6.91607 12.3555 5.01712 11.1327 5.01712Z"
-                  fill="white"
-                />
-              </svg>
-
-              <span>Add Group</span></a
-            >
-          </div>
+        <div class="formItem">
+          <label for="grpDesc" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            style="min-height: 130px"
+            id="grpDesc"
+          ></textarea>
         </div>
-      </div>
-
-      <div class="videosLists">
-        <div class="vidItem clientItem">
-          <div class="row">
-            <div class="col-xl-10 col-lg-10 col-md-12">
-              <div class="grpInfo">
-                <div class="row">
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-12">
-                    <div class="gAvt">
-                      <img src="../../img/front/comedy.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-xl-10 col-lg-10 col-md-9 col-12">
-                    <div class="gDesc">
-                      <div class="gTitle">Comedy</div>
-                      <div class="gExc">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Adipiscing viverra dignissim venenatis enim id.
-                          Viverra tincidunt vitae risus, mauris, ut mauris. Nam
-                          sit aliquet curabitur pharetra mollis turpis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-12">
-              <div class="actions">
-                <div class="butcons">
-                  <a href="" class="act edit"
-                    ><i class="bi bi-pencil-fill"></i
-                  ></a>
-                  <a href="" class="act delete"
-                    ><i class="bi bi-trash-fill"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="formItem groupPhoto">
+          <img id="gPrev" />
+          <label for="gPic" class="pBtn">Choose Picture</label>
+          <input type="file" accept="image/*" id="gPic" class="grpPhoto" />
         </div>
-        <div class="vidItem clientItem">
-          <div class="row">
-            <div class="col-xl-10 col-lg-10 col-md-12">
-              <div class="grpInfo">
-                <div class="row">
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-12">
-                    <div class="gAvt">
-                      <img src="../../img/front/document.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-xl-10 col-lg-10 col-md-9 col-12">
-                    <div class="gDesc">
-                      <div class="gTitle">Document</div>
-                      <div class="gExc">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Adipiscing viverra dignissim venenatis enim id.
-                          Viverra tincidunt vitae risus, mauris, ut mauris. Nam
-                          sit aliquet curabitur pharetra mollis turpis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-12">
-              <div class="actions">
-                <div class="butcons">
-                  <a href="" class="act edit"
-                    ><i class="bi bi-pencil-fill"></i
-                  ></a>
-                  <a href="" class="act delete"
-                    ><i class="bi bi-trash-fill"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="formItem">
+          <input type="submit" class="pBtn" value="Save" />
         </div>
-        <div class="vidItem clientItem">
-          <div class="row">
-            <div class="col-xl-10 col-lg-10 col-md-12">
-              <div class="grpInfo">
-                <div class="row">
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-12">
-                    <div class="gAvt">
-                      <img src="../../img/front/crime.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-xl-10 col-lg-10 col-md-9 col-12">
-                    <div class="gDesc">
-                      <div class="gTitle">Crime</div>
-                      <div class="gExc">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Adipiscing viverra dignissim venenatis enim id.
-                          Viverra tincidunt vitae risus, mauris, ut mauris. Nam
-                          sit aliquet curabitur pharetra mollis turpis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-12">
-              <div class="actions">
-                <div class="butcons">
-                  <a href="" class="act edit"
-                    ><i class="bi bi-pencil-fill"></i
-                  ></a>
-                  <a href="" class="act delete"
-                    ><i class="bi bi-trash-fill"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="vidItem clientItem">
-          <div class="row">
-            <div class="col-xl-10 col-lg-10 col-md-12">
-              <div class="grpInfo">
-                <div class="row">
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-12">
-                    <div class="gAvt">
-                      <img src="../../img/front/clasics.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-xl-10 col-lg-10 col-md-9 col-12">
-                    <div class="gDesc">
-                      <div class="gTitle">Classics</div>
-                      <div class="gExc">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Adipiscing viverra dignissim venenatis enim id.
-                          Viverra tincidunt vitae risus, mauris, ut mauris. Nam
-                          sit aliquet curabitur pharetra mollis turpis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-12">
-              <div class="actions">
-                <div class="butcons">
-                  <a href="" class="act edit"
-                    ><i class="bi bi-pencil-fill"></i
-                  ></a>
-                  <a href="" class="act delete"
-                    ><i class="bi bi-trash-fill"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    //THe delete btn
+    let Dbtn = document.createElement("button");
+    Dbtn.className = "pDbtn";
+    Dbtn.innerHTML = "Delete";
+
+    Dbtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      gPrev.classList.remove("choosed");
+      gPrev.src = "";
+    });
+
+    let gPhoto = document.querySelector(".grpPhoto");
+    gPhoto.addEventListener("change", (e) => {
+      const [file] = e.target.files;
+      if (file) {
+        gPrev.src = URL.createObjectURL(file);
+        gPrev.classList.add("choosed");
+        document.querySelector(".groupPhoto").appendChild(Dbtn);
+      }
+    });
+  })();
+</script>
 
 </main>
     </div>

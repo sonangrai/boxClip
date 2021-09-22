@@ -1,0 +1,62 @@
+{% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Groups -
+Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
+%}
+
+<div class="dashboardHome">
+  {% include "./components/_header.twig" %}
+
+  <div class="create">
+    <div class="container">
+      <div class="creHead">Create New Group</div>
+      <form action="">
+        <div class="formItem">
+          <label for="groupName" class="form-label">Group Name</label>
+          <input type="text" class="form-control" id="groupName" />
+        </div>
+        <div class="formItem">
+          <label for="grpDesc" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            style="min-height: 130px"
+            id="grpDesc"
+          ></textarea>
+        </div>
+        <div class="formItem groupPhoto">
+          <img id="gPrev" />
+          <label for="gPic" class="pBtn">Choose Picture</label>
+          <input type="file" accept="image/*" id="gPic" class="grpPhoto" />
+        </div>
+        <div class="formItem">
+          <input type="submit" class="pBtn" value="Save" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    //THe delete btn
+    let Dbtn = document.createElement("button");
+    Dbtn.className = "pDbtn";
+    Dbtn.innerHTML = "Delete";
+
+    Dbtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      gPrev.classList.remove("choosed");
+      gPrev.src = "";
+    });
+
+    let gPhoto = document.querySelector(".grpPhoto");
+    gPhoto.addEventListener("change", (e) => {
+      const [file] = e.target.files;
+      if (file) {
+        gPrev.src = URL.createObjectURL(file);
+        gPrev.classList.add("choosed");
+        document.querySelector(".groupPhoto").appendChild(Dbtn);
+      }
+    });
+  })();
+</script>
+
+{% endblock %}
