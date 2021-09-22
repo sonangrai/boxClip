@@ -34,6 +34,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-weight: $font-sbold;
+  text-align: center;
 }
 
 //Tab
@@ -308,4 +309,15 @@
     border-radius: 8px;
     color: $color-white;
   }
+}
+
+.msg {
+  font-size: 1.4em;
+  color: $color-white;
+  font-weight: $font-bold;
+}
+.bBlock {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 2em;
 }
