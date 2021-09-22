@@ -84,5 +84,7 @@ It is configured with the following.
 | Add Group (Dashboard)       | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/addgroup)        |
 | Create Client (Front)       | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/createClients)       |
 | Assign Group (Front)        | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/assignGroup)         |
+| Create Client (Dashboard)   | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/createClients)   |
+| Assign Group (Dashboard)    | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/assignGroup)     |
 | Congratulations (Dashboard) | [Here](https://sonangrai.github.io/boxClip/dist/pages/dashboard/congratulations) |
 | Congratulations (Front)     | [Here](https://sonangrai.github.io/boxClip/dist/pages/front/congratulations)     |

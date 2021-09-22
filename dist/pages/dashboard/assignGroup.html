@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>
-Congratulations - Boxclip </title>
+    <title> Assign Group
+- Boxclip </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="shortcut icon"
@@ -358,12 +358,82 @@ Congratulations - Boxclip </title>
 </script>
 
 
-  <div class="create">
+  <div class="loginCard create">
     <div class="container">
-      <div class="creHead">Create New Client</div>
-      <strong class="msg">Congratulations</strong>
-      <small class="cSub">You have sucessfully created your account.</small>
-      <a href="./auth/login" class="pBtn bBlock">Login</a>
+      <div class="creHead">Assign Group</div>
+      <div class="logForm">
+        <form action="" class="assignForm">
+          <div class="formItem profilePhoto">
+            <img id="pPrev" />
+            <label for="pPic" class="pBtn">Choose Picture</label>
+            <input type="file" accept="image/*" id="pPic" class="proPhoto" />
+          </div>
+
+          <div class="formItem">
+            <label for="searchGroup" class="form-label">Groups</label>
+            <small class="subT"
+              >Assign groups you want to be invovled with</small
+            >
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"
+                ><i class="bi bi-search"></i
+              ></span>
+              <input
+                class="form-control"
+                id="searchGroup"
+                data-role="tagsinput"
+                placeholder="Search for Groups here..."
+              />
+            </div>
+            <div class="selectedRow">
+              <div class="grp">
+                <i class="bi bi-x"></i>
+                <span>Classics</span>
+              </div>
+              <div class="grp">
+                <i class="bi bi-x"></i>
+                <span>Documentry</span>
+              </div>
+              <div class="grp">
+                <i class="bi bi-x"></i>
+                <span>Suspense</span>
+              </div>
+              <div class="grp">
+                <i class="bi bi-x"></i>
+                <span>Animie</span>
+              </div>
+              <div class="grp">
+                <i class="bi bi-x"></i>
+                <span>Drama</span>
+              </div>
+            </div>
+            <div class="foundGroups">
+              <div class="grpF">
+                <span>Action</span>
+              </div>
+              <div class="grpF">
+                <span>Comedies</span>
+              </div>
+              <div class="grpF">
+                <span>Crime</span>
+              </div>
+              <div class="grpF">
+                <span>Critic’s Picks</span>
+              </div>
+              <div class="grpF">
+                <span>Horror</span>
+              </div>
+              <div class="grpF">
+                <span>Independent</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="formItem">
+            <input type="submit" class="pBtn" value="Done" />
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
@@ -371,23 +441,23 @@ Congratulations - Boxclip </title>
 <script>
   (function () {
     //THe delete btn
-    let Dbtn = document.createElement("button");
-    Dbtn.className = "pDbtn";
-    Dbtn.innerHTML = "Delete";
+    let pDbtn = document.createElement("button");
+    pDbtn.className = "pDbtn";
+    pDbtn.innerHTML = "Delete";
 
-    Dbtn.addEventListener("click", (e) => {
+    pDbtn.addEventListener("click", (e) => {
       e.preventDefault();
-      gPrev.classList.remove("choosed");
-      gPrev.src = "";
+      pPrev.classList.remove("choosed");
+      pPrev.src = "";
     });
 
-    let gPhoto = document.querySelector(".grpPhoto");
-    gPhoto.addEventListener("change", (e) => {
+    let pPhoto = document.querySelector(".proPhoto");
+    pPhoto.addEventListener("change", (e) => {
       const [file] = e.target.files;
       if (file) {
-        gPrev.src = URL.createObjectURL(file);
-        gPrev.classList.add("choosed");
-        document.querySelector(".groupPhoto").appendChild(Dbtn);
+        pPrev.src = URL.createObjectURL(file);
+        pPrev.classList.add("choosed");
+        document.querySelector(".profilePhoto").appendChild(pDbtn);
       }
     });
   })();
