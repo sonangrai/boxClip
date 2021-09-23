@@ -3,8 +3,7 @@
   &.openedSide {
     aside {
       width: 300px;
-      position: sticky;
-      top: 0;
+      overflow: unset;
       @include lg {
         position: fixed;
         left: -300px;
@@ -20,6 +19,7 @@
   aside {
     width: 0;
     transition: 0.3s;
+    overflow: hidden;
     @include lg {
       position: fixed;
       overflow: hidden;
