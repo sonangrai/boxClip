@@ -164,6 +164,19 @@
       .upload {
         margin-left: 1em;
       }
+      .fav {
+        .dropdown-toggle::after {
+          display: none;
+        }
+        button {
+          background-color: transparent;
+          padding: 0;
+          border: 0;
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+      }
     }
   }
 }

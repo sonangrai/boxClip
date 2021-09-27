@@ -308,11 +308,31 @@ Boxclip </title>
           </a>
         </div>
         <div class="fav">
-          <a href="#!" class="userDP">BK</a>
-          <!-- If image of user is there -->
-          <!-- <a href="#!" class="userDP">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <a href="#!" class="userDP">BK</a>
+              <!-- If image of user is there -->
+              <!-- <a href="#!" class="userDP">
             <img src="" alt="">
           </a> -->
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="dropdownMenuButton2"
+            >
+              <li><a class="dropdown-item active" href="#">Link 1</a></li>
+              <li><a class="dropdown-item" href="#">Link 2</a></li>
+              <li><a class="dropdown-item" href="#">Link 3</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
