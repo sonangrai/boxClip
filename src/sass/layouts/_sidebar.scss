@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #272626;
+  background-color: #3854ac;
   min-height: 100vh;
   padding: 2em;
   position: sticky;
@@ -48,11 +48,15 @@
             margin-right: 1em;
             width: 16px;
             height: auto;
+            path {
+              fill: #fff;
+            }
           }
           &.active {
-            background-color: $primary-color;
+            background-color: #fff;
+            color: #3854ac;
             svg path {
-              fill: #fff;
+              fill: #3854ac;
             }
           }
         }
