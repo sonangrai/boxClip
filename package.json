@@ -23,6 +23,5 @@
     "gulp-twig2html": "^2.1.0",
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.2.6"
-  },
-  "dependencies": {}
+  }
 }

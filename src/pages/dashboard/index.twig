@@ -1,17 +1,23 @@
 {% extends '../../layout/_layoutSidebar.twig' %} {% block title %} Dashboard -
 Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
 %}
+<link
+  href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.1/dist/svgMap.min.css"
+  rel="stylesheet"
+/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.7.1/dist/svgMap.min.js"></script>
 
-<div class="dashboardHome">
+<div class="dashboardHome forLife">
   {% include "./components/_header.twig" %}
 
   <!-- The Grids -->
   <div class="container">
     <div class="dashTiles">
-      <div class="tileCard welcomeCard">
+      <div class="tileCard welcomeCard primeBck">
         <div class="user">
-          <strong>Hello Adam</strong>
+          <strong>Hello 4Life</strong>
           <small>welcome back!!</small>
         </div>
         <div class="subType">
@@ -219,26 +225,8 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
         </div>
       </div>
 
-      <div class="tileCard topVideo">
-        <div class="title">Top Video</div>
-
-        <div class="videoRow">
-          <a class="vidItem" href="#!">
-            <div class="row">
-              <div class="col-5">
-                <div class="img">
-                  <img src="../../img/dashboard/vid1.png" alt="" />
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="vidInfo">
-                  <div class="vidTitle">4th of July, 2020</div>
-                  <div class="vidDate">Dec 12, 2020</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+      <div class="tileCard worldMap">
+        <div id="svgMap"></div>
       </div>
 
       <div class="tileCard usedSpace">
@@ -282,7 +270,7 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
       {
         label: "Upload Statistics",
         backgroundColor: "#8A8484",
-        borderColor: "#fff846",
+        borderColor: "#f7941d",
         data: [4, 3, 1, 4, 8, 9, 8, 2, 1, 0, 2, 0],
         tension: 0.3,
       },
@@ -305,6 +293,38 @@ Boxclip {% endblock %} {% block javascripts %} {% endblock %} {% block contents
   };
   var ctx = document.getElementById("myChart").getContext("2d");
   window.myLine = new Chart(ctx, config);
+</script>
+
+<script>
+  new svgMap({
+    targetElementID: "svgMap",
+    colorMin: "#fff846",
+    colorMax: "#f7941d",
+    data: {
+      data: {
+        gdp: {
+          name: "GDP per capita",
+          format: "{0} USD",
+          thousandSeparator: ",",
+          thresholdMax: 50000,
+          thresholdMin: 1000,
+        },
+        change: {
+          name: "Change to year before",
+          format: "{0} %",
+        },
+      },
+      applyData: "gdp",
+      values: {
+        AF: { gdp: 587, change: 4.73 },
+        AL: { gdp: 4583, change: 11.09 },
+        DZ: { gdp: 4293, change: 10.01 },
+        US: { gdp: 4293, change: 10.01 },
+        RU: { gdp: 9000, change: 10.01 },
+        // ...
+      },
+    },
+  });
 </script>
 
 {% endblock %}
