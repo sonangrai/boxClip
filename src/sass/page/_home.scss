@@ -18,7 +18,7 @@
   padding: 3em 0;
   .userCard {
     width: 30%;
-    background-color: #2b2b2bdb;
+    background-color: #3854ac;
     padding: 2em;
     color: $color-white;
     @include xl {
@@ -28,8 +28,8 @@
       width: 100%;
     }
     .avat {
-      width: 130px;
-      height: 130px;
+      width: 170px;
+      height: 90px;
       border-radius: 50%;
       overflow: hidden;
       img {
@@ -47,8 +47,8 @@
     }
     .userUrl {
       a {
-        color: #53a2ff;
-        text-decoration: underline;
+        color: #fff;
+        text-decoration: none;
       }
     }
     table {
